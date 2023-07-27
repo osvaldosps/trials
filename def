@@ -1,0 +1,2078 @@
+## **Project Overview**
+---
+### **Background**
+
+E-commerce telah menjadi pasar global yang berkembang pesat, termasuk di Brasil. Olist adalah sebuah perusahaan teknologi berbasis di Brasil yang beroperasi di bidang e-commerce. Didirikan pada tahun 2015 oleh Tiago Dalvi, Olist memiliki visi untuk membantu pemilik bisnis kecil dan menengah untuk masuk ke dunia e-commerce dan bersaing dengan lebih baik di pasar yang kompetitif.
+
+Olist berfungsi sebagai platform yang menghubungkan pemilik bisnis kecil dan menengah dengan pasar online, memungkinkan mereka untuk menjual produk mereka melalui beberapa channel e-commerce yang besar dan terkenal di Brasil. Olist bertujuan untuk mengatasi tantangan yang dihadapi oleh UKM, seperti kurangnya visibilitas, infrastruktur teknis yang rumit, dan terbatasnya akses ke pasar online.
+### **Business Understanding**
+
+Berikut adalah beberapa aspek penting pada bisnis model perusahaan Olist:
+
+| **Key Aspect**    | **Description**   |
+| ---               | ---               |
+| Platform Ecommerce | Olist menyediakan platform e-commerce yang memungkinkan pemilik bisnis untuk memasarkan dan menjual produk mereka secara online. Platform ini juga dapat diintegrasikan dengan berbagai pasar e-commerce terkemuka di Brasil. |
+| Memperluas Jangkauan | Melalui Olist, para penjual dapat menjangkau pelanggan yang lebih luas dan mendapatkan akses ke pasar online yang lebih besar, yang mungkin tidak mungkin mereka capai jika hanya mengandalkan toko fisik atau situs web sendiri. |
+| Integrasi Pasar Ecommerce | Olist berfungsi sebagai agregator dan mengintegrasikan toko online dari penjual ke platform e-commerce utama di Brasil seperti Mercado Livre dan B2W (Americanas, Submarino, Shoptime), serta platform lainnya. Dengan cara ini, penjual dapat menampilkan produk mereka di berbagai pasar secara efisien. | 
+| Peningkatan Dukungan Penjual | Olist juga menyediakan dukungan bagi penjual untuk mempermudah proses pengelolaan bisnis online mereka. Hal ini termasuk dukungan dalam hal seperti manajemen inventaris, proses pesanan, dan layanan pelanggan. |
+| Skala Usaha   | Olist membantu bisnis kecil dan menengah untuk lebih mudah masuk ke pasar e-commerce dan bersaing secara efektif dengan penjual besar lainnya. Dengan demikian, mereka dapat memperluas usaha mereka dan meningkatkan omset. |
+| Komisi atas Penjualan | Olist memperoleh pendapatan dengan mengenakan biaya layanan atau komisi atas penjualan yang terjadi melalui platform mereka. Biaya ini berdasarkan persentase dari nilai transaksi dan merupakan cara utama Olist menghasilkan pendapatan. |
+
+### **Problem Statement**
+
+Pasar e-commerce di Brasil, khususnya dalam platform Olist, telah menarik perhatian pelanggan dan penjual dari berbagai wilayah. Namun, tantangan tetap ada dalam meningkatkan frekuensi dan penjualan pada kelompok pelanggan dengan kebiasaan belanja yang jarang, tingkat loyalitas rendah, dan jumlah item di keranjang belanja yang masih relatif kecil. 
+
+Selain itu, pembelian produk Olist juga cenderung terpusat pada kota-kota besar saja, yang berarti akses pelanggan di daerah terpencil terhadap penjual di luar kota besar perlu dioptimalkan untuk mendorong keterlibatan lebih luas sehingga bisa meningkatkan profit. 
+
+
+Beberapa aspek yang mungkin menjadi penyebab masalah ini antara lain:
+
+| **Key Aspect**    | **Description**   |
+| ---               | ---               |
+| Konten dan Pilihan Produk Terbatas | Jika penawaran produk dan konten di platform Olist terbatas untuk daerah-daerah tertentu, hal ini dapat mengurangi minat dan keterlibatan pelanggan. Daerah dengan pilihan produk yang terbatas mungkin tidak dapat memenuhi kebutuhan dan preferensi unik konsumennya. | 
+| Keterbatasan Strategi Pemasaran Lokal | Strategi pemasaran yang diterapkan di tingkat nasional mungkin tidak sepenuhnya relevan atau efektif di daerah-daerah yang berbeda di Brasil. Keterbatasan penargetan dan personalisasi dapat mengurangi dampak kampanye pemasaran pada tingkat lokal. |
+| Keterbatasan Aksesibilitas Teknologi | Beberapa daerah di Brasil mungkin masih menghadapi keterbatasan aksesibilitas teknologi, seperti koneksi internet yang kurang stabil atau terbatasnya akses ke perangkat digital. Ini dapat mengurangi partisipasi dan keterlibatan pelanggan di platform e-commerce. |
+| Kurangnya Kesadaran Ecommerce | Di beberapa daerah, adopsi dan kesadaran tentang e-commerce mungkin belum mencapai tingkat yang optimal. Beberapa konsumen mungkin masih lebih suka berbelanja di toko fisik atau kurang familiar dengan keuntungan dan kenyamanan berbelanja online. |
+| Persaingan dengan Penjual Lokal | Di beberapa daerah, penjual lokal mungkin memiliki keunggulan dalam menjangkau pelanggan dan memenuhi kebutuhan mereka dengan lebih baik. Persaingan dari penjual lokal ini dapat menjadi tantangan bagi pertumbuhan bisnis Olist di wilayah-wilayah tersebut. |
+### **Project Objectives**
+
+Tujuan dari proyek ini adalah untuk membuat strategi peningkatan frekuensi dan penjualan produk Olist kepada pelanggan yang tergolong tidak aktif atau bahkan sudah ***churn*** berdasarkan lokasi geografis nya. Dengan menerapkan algoritma K-Means clustering berdasarkan metrik LRFM dan area geografis, serta memanfaatkan collaborative filtering untuk sistem rekomendasi, proyek ini dapat digunakan untuk:
+
+1. Mengidentifikasi kelompok pelanggan berdasarkan pola pembelian dan tingkat loyalitas mereka menggunakan metrik LRFM, dan mengembangkan sistem rekomendasi berbasis collaborative filtering yang dapat memberikan rekomendasi produk yang relevan dan personal untuk meningkatkan loyalitas dan transaksi pada kelompok pelanggan yang ditargetkan.
+
+2. Mengelompokkan penjual Olist berdasarkan jumlah pelanggan yang mereka layani di berbagai daerah, serta mempertimbangkan lokasi geografis mereka. Hal ini akan membantu meningkatkan keterlibatan dan transaksi antara pelanggan dan penjual yang berada di kota yang sama atau di daerah terpencil.
+
+3. Mengoptimalkan strategi pemasaran dan promosi yang disesuaikan dengan preferensi dan kebutuhan unik pelanggan di setiap kelompok untuk meningkatkan loyalitas dan transaksi dengan membuat recommendation system yang dapat memberikan rekomendasi kategori produk apa yang cocok untuk pelanggan tiap kelompoknya.
+
+Untuk mencapai tujuan tersebut, proyek ini akan melibatkan pendekatan berikut:
+
+1. **Menggunakan algoritma K-Means untuk mengelompokkan pelanggan Olist berdasarkan LRFM dan area geografis.** </br>
+Proyek ini hanya melakukan clustering dengan algoritma K-means, karena K-Means Clustering memiliki kompleksitas yang relatif rendah, membuatnya lebih efisien dalam menangani dataset yang besar (dibandingkan algoritma Agglomerative dan DBSCAN). K-Means bekerja dengan cepat karena memiliki waktu eksekusi yang linier tergantung pada jumlah data dan jumlah kluster yang diinginkan (K), sehingga cocok untuk analisis data yang banyak. </br>
+K-Means cenderung lebih scalable daripada beberapa metode clustering lainnya, seperti Agglomerative Clustering atau DBSCAN. Hal ini disebabkan karena K-Means tidak melibatkan penghitungan jarak antara setiap pasangan data pada setiap iterasi, seperti pada metode agglomerative. Hasil dari K-Means Clustering lebih mudah diinterpretasikan daripada beberapa metode clustering lainnya. Setiap kluster memiliki pusatnya sendiri, yang mewakili karakteristik rata-rata dari data dalam kluster tersebut.
+
+2. **Evaluasi hasil K-Means menggunakan Inertia dan Silhouette Score.** </br>
+
+| **Evaluation Metrics**    | **Description**   |
+| ---               | ---               |
+| Inertia | "Within Cluster Sum of Squares" (WCSS) atau disebut juga "Inertia" mengukur sejauh mana setiap titik data dalam suatu kluster berada dari pusat klusternya. Semakin kecil nilai WCSS, semakin baik performa K-Means Clustering, karena berarti data di dalam kluster semakin kompak atau seragam. | 
+| Silhouette Score | Metrik ini memberikan gambaran tentang seberapa baik setiap titik data diberikan label kluster yang sesuai, dengan memperhatikan jarak antara titik tersebut dengan titik-titik pada kluster lainnya. Silhouette Score dihitung untuk setiap titik data dan memiliki rentang nilai dari -1 hingga 1 (Nilai +1 = titik data diberikan label kluster yang sangat sesuai, dengan jarak yang cukup besar dengan titik-titik pada kluster lain, Nilai mendekati 0 = titik data berada sangat dekat dengan garis pemisah antara dua kluster, dan bisa berarti bahwa titik tersebut mungkin tidak berada di kluster yang sesuai. Nilai mendekati -1 = titik data diberikan label kluster yang salah, dan lebih dekat dengan titik-titik pada kluster lain daripada dengan kluster yang diberikan label). |
+
+3. **Menggunakan teknik User-Based Collaborative Filtering untuk membuat rekomendasi kategori produk yang cocok untuk pelanggan.** </br>
+Collaborative Filtering adalah teknik dalam pembuatan sistem rekomendasi yang berfokus pada mengidentifikasi preferensi atau minat pengguna berdasarkan kolaborasi antara pengguna lain atau produk yang serupa. Teknik ini berupaya memberikan rekomendasi yang personal dan relevan berdasarkan perilaku dan preferensi pengguna dalam bentuk rating atau interaksi sebelumnya dengan item-item di platform. Pada pendekatan ini, rekomendasi diberikan berdasarkan kesamaan preferensi antara pengguna. Jika dua pengguna memiliki sejarah penilaian atau perilaku yang serupa pada item tertentu, maka item tersebut akan direkomendasikan kepada pengguna yang belum menilai atau berinteraksi dengan item tersebut. Algoritma user-based Collaborative Filtering akan mencari pengguna-pengguna yang paling mirip dengan pengguna target dan menggunakan rating mereka untuk memberikan rekomendasi.
+ 
+4. **Evaluasi hasil Collaborative Filtering menggunakan MAE dan RMSE.**
+
+| **Evaluation Metrics**    | **Description**   |
+| ---               | ---               |
+| MAE | Mean Absolute Error (MAE) mengukur selisih absolut antara nilai sebenarnya dari pengguna dengan nilai yang diprediksi oleh sistem rekomendasi. Semakin rendah nilai MAE, semakin akurat sistem rekomendasi dalam memprediksi pengguna. | 
+| RMSE | Root Mean Square Error (RMSE) mengukur akar dari rata-rata dari kuadrat selisih antara nilai sebenarnya dengan rating yang diprediksi. RMSE memberikan bobot lebih besar pada kesalahan besar, dan semakin rendah nilai RMSE, semakin baik performa sistem rekomendasi dalam memprediksi pengguna. |
+
+Pada pembuatan model machine learning di project ini, metrik yang diprioritaskan adalah MAE karena MAE menghitung perbedaan absolut antara nilai prediksi dan nilai sebenarnya, tanpa menggunakan operasi kuadrat pada error. Dengan tidak menggunakan operasi kuadrat, nilai error yang besar (seperti yang disebabkan oleh outliers) tidak diperbesar secara signifikan. 
+
+Dalam hal ini, outliers tidak memiliki pengaruh yang terlalu besar pada nilai keseluruhan MAE. MAE memberikan perhatian yang lebih seimbang terhadap semua error, termasuk outliers. Hal ini sangat berpengaruh signifikan apabila terdapat data-data yang nilai nya sangat besar, karena pada dataset terdapat data-data produk yang cenderung nilai penjualan nya tinggi.
+## **Data Understanding**
+
+- Dataset merupakan riwayat pemesanan pelanggan yang terjadi di platform Olist dari Oktober 2016 hingga Agustus 2018.
+- Setiap baris data merepresentasikan informasi terkait order / pemesanan seorang pelanggan beredasarkan produk yang dipesan.
+### **Data Scheme**
+from IPython.display import Image
+
+Image(filename=r'C:\Users\osira\Documents\Purwadhika\JCDS Python\Final Project\olist data scheme.png')
+
+### **Attributes Information**
+
+| **Attribute** | **Data Type** | **Description** |
+| ---           | ---           | ---               |
+| customer_id | object | ID pelanggan yang terbentuk saat membuat pemesanan di platform (satu pelanggan dapat memiliki beberapa customer_id) |
+| customer_unique_id | object | ID pelanggan yang terbentuk di awal saat melakukan pendaftaran (satu pelanggan hanya memiliki 1 customer_unique_id) |
+| customer_zip_code_prefix | int64 | Awalan kode pos dari tempat pelanggan menerima pemesanan |
+| customer_city | object | Nama kota tempat pelanggan menerima pemesanan |
+| customer_state | object | Nama negara bagian (provinsi) tempat pelanggan menerima pemesanan |
+| product_id | object | ID produk yang dipesan oleh pelanggan (sudah disamarkan) |
+| product_category_name | object | Kategori produk yang dipesan oleh pelanggan (dalam bahasa Portuguese) |
+| product_name_lenght | float64 | Panjang (jumlah karakter) dari nama produk yang dipesan oleh pelanggan |
+| product_description_lenght | float64 | Panjang (jumlah karakter) dari deskripsi produk yang dipesan oleh pelanggan |
+| product_photos_qty | float64 | Jumlah foto produk yang dipesan oleh pelanggan |
+| product_weight_g | float64 | Berat produk yang dipesan oleh pelanggan dalam gram |
+| product_length_cm | float64 | Panjang produk yang dipesan oleh pelanggan dalam sentimeter |
+| product_height_cm | float64 | Tinggi produk yang dipesan oleh pelanggan dalam sentimeter |
+| product_width_cm | float64 | Lebar produk yang dipesan oleh pelanggan dalam sentimeter |
+| order_id | object | ID pemesanan yang terbentuk di setiap pemesanan oleh pelanggan |
+| order_item_id | float64 | Banyaknya jumlah produk yang terdapat pada tiap pemesanan oleh pelanggan |
+| seller_id | object | ID penjual yang terbentuk di awal saat melakukan pendaftaran (satu penjual hanya memiliki 1 seller_id) |
+| shipping_limit_date | datetime64[ns] | Tanggal batas waktu pengiriman pesanan oleh penjual |
+| price | float64 | Harga tiap produk saat pemesanan dilakukan pelanggan (mata uang R$) |
+| freight_value | float64 | Biaya pengiriman produk |
+| seller_zip_code_prefix | float64 | Awalan kode pos dari alamat penjual |
+| seller_city | object | Nama kota tempat penjual berlokasi |
+| seller_state | object | Nama negara bagian (provinsi) tempat penjual berlokasi |
+| order_status | object | Status pemesanan untuk tiap pemesanan yang terjadi |
+| order_purchase_timestamp | datetime64[ns] | Tanggal dan waktu saat pesanan dibuat |
+| order_delivered_carrier_date | datetime64[ns] | Tanggal dan waktu saat pesanan diserahkan kepada kurir pengiriman |
+| order_delivered_customer_date | datetime64[ns] | Tanggal dan waktu saat pesanan diterima oleh pelanggan |
+| order_estimated_delivery_date | datetime64[ns] | Tanggal dan waktu perkiraan pengiriman pesanan |
+| review_score | float64 | Nilai ulasan (review) dari pelanggan terhadap produk dan layanan (dalam skala 1 hingga 5) |
+| payment_sequential | float64 | Nomor urut transaksi pembayaran |
+| payment_type | object | Metode pembayaran yang digunakan pelanggan untuk tiap pemesanan |
+| payment_installments | float64 | Jumlah cicilan pembayaran |
+| payment_value | float64 | Nilai total pembayaran untuk setiap produk yang dipesan oleh pelanggan (mata uang R$)|
+| product_category_name_english | object | Kategori produk yang dipesan oleh pelanggan (dalam bahasa Inggris) |
+### **Library**
+import numpy as np 
+import pandas as pd 
+import seaborn as sns 
+import matplotlib.pyplot as plt
+pd.set_option('display.max_columns',None)
+from scipy.stats import iqr
+
+from operator import attrgetter
+
+from sklearn.metrics import silhouette_score
+from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN
+
+# encoding
+from sklearn.preprocessing import OneHotEncoder
+from category_encoders import BinaryEncoder, OrdinalEncoder # untuk ordinal dan binary encoder
+
+# scaling
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler 
+
+# column transformer & pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
+from scipy.spatial.distance import cdist,pdist
+from sklearn.metrics import silhouette_score
+
+import plotly.express as px
+import plotly.graph_objects as go
+
+import folium
+import geopandas as gpd
+
+from surprise import Reader, Dataset
+from surprise import SVD, BaselineOnly
+from surprise.model_selection import train_test_split, cross_validate, GridSearchCV, RandomizedSearchCV
+from surprise import accuracy
+### **Data Set**
+customers_dataset = pd.read_csv('olist_customers_dataset.csv')
+geolocation_dataset = pd.read_csv('olist_geolocation_dataset.csv')
+order_items_dataset = pd.read_csv('olist_order_items_dataset.csv')
+order_payments_dataset = pd.read_csv('olist_order_payments_dataset.csv')
+order_reviews_dataset = pd.read_csv('olist_order_reviews_dataset.csv')
+orders_dataset = pd.read_csv('olist_orders_dataset.csv')
+products_dataset = pd.read_csv('olist_products_dataset.csv')
+sellers_dataset = pd.read_csv('olist_sellers_dataset.csv')
+category_name_translation = pd.read_csv('product_category_name_translation.csv')
+order_location = pd.merge(left=order_items_dataset,right=sellers_dataset,on='seller_id',how='outer')
+order_status = pd.merge(left=order_location,right=orders_dataset,on='order_id',how='outer')
+order_reviews = pd.merge(left=order_status,right=order_reviews_dataset,on='order_id',how='outer')
+order_payments = pd.merge(left=order_reviews,right=order_payments_dataset,on='order_id',how='outer')
+order_products = pd.merge(left=products_dataset,right=order_payments,on='product_id',how='outer')
+customer_orders = pd.merge(left=customers_dataset,right=order_products,on='customer_id',how='outer')
+df = pd.merge(left=customer_orders,right=category_name_translation,on='product_category_name',how='outer')
+df.head()
+### **Data Cleaning**
+***Duplicated Data***
+
+    Pada dataset tidak ditemukan data yang duplicate atau sama antara satu baris dengan baris lainnya.
+df.duplicated().sum()
+***Missing Values***
+
+    Pada dataset ditemukan banyak data yang masih kosong atau tidak ada nilai nya. Pada bagian ini, dilakukan pengisian atau penghapusan data tersebut.
+missing_values = df.isna().sum()
+columns_with_missing_values = missing_values[missing_values > 100]
+columns_with_missing_values
+    Pada bagian ini dilakukan penghapusan data yang tidak memiliki nilai di kolom product_id, karena produk_id tidak dapat diisi baik secara statistika atau secara random, dan tidak ada juga acuan yang dapat membantu pengisian. Agar tidak mempengaruhi hasil analisa, maka data tersebut dihapus.
+df = df.dropna(subset=['product_id'])
+    Pada bagian ini dilakukan penghapusan data yang tidak memiliki nilai di kolom product_category_name, karena product_category_name tidak dapat diisi baik secara statistika atau secara random, dan tidak ada juga acuan yang dapat membantu pengisian. Agar tidak mempengaruhi hasil analisa, maka data tersebut dihapus.
+df = df.dropna(subset=['product_category_name'])
+    Pada bagian ini dilakukan penghapusan data yang tidak memiliki nilai di kolom order_delivered_carrier_date, karena order_delivered_carrier_date tidak dapat diisi baik secara statistika atau secara random, dan tidak ada juga acuan yang dapat membantu pengisian. Agar tidak mempengaruhi hasil analisa, maka data tersebut dihapus.
+df = df.dropna(subset=['order_delivered_carrier_date'])
+    Pada bagian ini dilakukan penghapusan data yang tidak memiliki nilai di kolom order_delivered_customer_date, karena order_delivered_customer_date tidak dapat diisi baik secara statistika atau secara random, dan tidak ada juga acuan yang dapat membantu pengisian. Agar tidak mempengaruhi hasil analisa, maka data tersebut dihapus.
+df = df.dropna(subset=['order_delivered_customer_date'])
+    Pada bagian ini dilakukan pengisian data review_score dengan memperhatikan kategori produk nya. Dengan menggunakan median dari skor penilaian produk di kategori ini, maka data kosong dapat diisi dan memiliki interpretasi yang serupa dengan produk-produk di kategori yang sama.
+df['review_score'] = df.groupby(['product_category_name'])['review_score'].apply(lambda x: x.fillna(x.median()))
+    Pada bagian ini dilakukan penghapusan data order_status yang statusnya selain 'delivered' karena untuk pesanan-pesanan yang belum selesai belum valid menggambarkan pendapatan penjual ataupun platform (masih di proses). Sehingga, untuk keperluan analisa, data yang digunakan hanyalah pesanan-pesanan yang sudah selesai.
+df = df.drop(df[df['order_status'] == 'canceled'].index)
+df['order_status'].value_counts()
+    Pada bagian ini dilakukan pengisian product_category_name_english yang kosong dengan cara mencari pasangan yang tepat pada data awal product_category_name (yaitu dengan bahasa Portuguese).
+df[df['product_category_name_english'].isna()]['product_category_name'].value_counts()
+Ditemukan bahwa kategori yang kosong adalah kategori dengan data original yang tidak memiliki group kategori, sehingga dicari yang paling tepat untuk menyamakan kategori nya. 
+df['product_category_name'] = df['product_category_name'].replace({
+    'portateis_cozinha_e_preparadores_de_alimentos':'utilidades_domesticas',
+    'pc_gamer':'pcs'
+    })
+map_english_cat = df.groupby('product_category_name')['product_category_name_english'].first().to_dict()
+df['product_category_name_english'] = df['product_category_name'].map(map_english_cat).fillna(df['product_category_name_english'])
+df['product_category_name_english'].isna().sum()
+    Pada bagian ini dilakukan penghapusan data yang tidak memiliki nilai di kolom payment_sequential, karena payment_sequential tidak dapat diisi baik secara statistika atau secara random, dan tidak ada juga acuan yang dapat membantu pengisian. Agar tidak mempengaruhi hasil analisa, maka data tersebut dihapus.
+df = df.dropna(subset=['payment_sequential'])
+df.head()
+    Pada bagian ini dilakukan penghapusan data yang tidak memiliki nilai di kolom product_weight_g, karena product_weight_g tidak dapat diisi baik secara statistika atau secara random, dan tidak ada juga acuan yang dapat membantu pengisian. Agar tidak mempengaruhi hasil analisa, maka data tersebut dihapus.
+df = df.dropna(subset=['product_weight_g'])
+    Pada bagian ini dilakukan penghapusan kolom dengan data kosong yang banyak dan tidak memiliki peran signifikan terhadap tujuan analisa.
+missing_values = df.isna().sum()
+columns_with_missing_values = missing_values[missing_values > 0]
+columns_with_missing_values
+drop_columns = list(columns_with_missing_values.to_dict().keys())
+df = df.drop(columns=drop_columns)
+df.head()
+df.isna().sum().value_counts()
+***Date Time Re-Formatting***
+
+    Pada bagian ini dilakukan penyamaan tipe data untuk kolom-kolom yang merupakan sebuah tanggal, sengan menyamakan format YYYY-MM-DD.
+columns_with_date = ['shipping_limit_date', 'order_purchase_timestamp', 'order_delivered_carrier_date', 'order_delivered_customer_date', 'order_estimated_delivery_date']
+df[columns_with_date] = df[columns_with_date].apply(lambda x: pd.to_datetime(x).dt.strftime('%Y-%m-%d'))
+df.head()
+df[columns_with_date] = df[columns_with_date].apply(pd.to_datetime)
+df[columns_with_date].info()
+df['order_item_id'].value_counts()
+***State Re-Naming***
+
+    Pada bagian ini dilakukan penamaan ulang terhadap state baik pelanggan maupun penjual, agar lebih mudah diinterpretasi.
+state_mapping = {
+    'SP': 'São Paulo',
+    'RN': 'Rio Grande do Norte',
+    'AC': 'Acre',
+    'RJ': 'Rio de Janeiro',
+    'ES': 'Espírito Santo',
+    'MG': 'Minas Gerais',
+    'BA': 'Bahia',
+    'SE': 'Sergipe',
+    'PE': 'Pernambuco',
+    'AL': 'Alagoas',
+    'PB': 'Paraíba',
+    'CE': 'Ceará',
+    'PI': 'Piauí',
+    'MA': 'Maranhão',
+    'PA': 'Pará',
+    'AP': 'Amapá',
+    'AM': 'Amazonas',
+    'RR': 'Roraima',
+    'DF': 'Distrito Federal',
+    'GO': 'Goiás',
+    'RO': 'Rondônia',
+    'TO': 'Tocantins',
+    'MT': 'Mato Grosso',
+    'MS': 'Mato Grosso do Sul',
+    'RS': 'Rio Grande do Sul',
+    'PR': 'Paraná',
+    'SC': 'Santa Catarina'
+}
+
+df['customer_state'] = df['customer_state'].replace(state_mapping)
+df['seller_state'] = df['seller_state'].replace(state_mapping)
+# df.to_excel('Ecommerce Data - Final Project.xlsx',index=False)
+
+### **EDA**
+#### **Year-on-Year Sales Trend**
+
+Pada bagian ini, dilakukan analisis tren penjualan (sales) secara Year-on-Year (YoY). Analisis YoY merupakan metode yang berguna untuk memahami pertumbuhan atau penurunan kinerja bisnis dari tahun ke tahun. Dalam konteks proyek ini, data penjualan yang digunakan mencakup transaksi dari berbagai produk dan pelanggan yang terjadi dari Oktober 2016-Agustus 2018. Dalam bagian ini, akan disajikan visualisasi data berupa grafik dan diagram untuk memvisualisasikan tren penjualan secara YoY. Selain itu, kami juga akan memberikan penjelasan tentang pola-pola yang dapat ditemukan dari data yang disajikan.
+df_revenue = df.groupby(['order_id','order_purchase_timestamp'])[['payment_value']].min().reset_index()
+df_revenue['order_purchase_month'] = pd.PeriodIndex(df_revenue['order_purchase_timestamp'],freq='M')
+monthly_revenue = df_revenue.groupby('order_purchase_month').sum().reset_index()
+monthly_revenue['order_purchase_month'] = monthly_revenue['order_purchase_month'].dt.strftime('%b-%Y')
+monthly_revenue
+plt.figure(figsize=(20,6))
+sns.lineplot(data=monthly_revenue,x='order_purchase_month',y='payment_value')
+sns.scatterplot(data=monthly_revenue,x='order_purchase_month',y='payment_value')
+plt.xticks(rotation=90)
+plt.xlabel('Month')
+plt.yticks(range(0,1600000,100000))
+plt.ylabel('Total Paid Order (Revenue)')
+plt.title('Revenue Oct-2016 to Aug-2018 ')
+plt.show()
+    Berdasarkan data penjualan dari Oktober 2016 ke Agustus 2018, dapat dilihat bahwa terjadi pertumbuhan revenue yang cukup signifikan. Revenue tertinggi ada pada November 2017. Akan tetapi terjadi trend penurunan dari May 2018 ke Agustus 2018 (5 bulan kebelakang dari data diambil). Maka dari itu dibutuhkan strategi baru untuk kembali meningkatkan penjualan agar revenue tidak terus menurun.
+#### **Best Selling Category**
+
+Dalam bagian ini, akan dilakukan eksplorasi kategori produk terlaris (best selling category) dan produk paling tidak laris di platform e-commerce Olist. Analisis ini bertujuan untuk mengidentifikasi kategori produk yang paling diminati oleh pelanggan, sehingga dapat membantu Olist dalam mengoptimalkan strategi penjualan dan manajemen persediaan. Akan disajikan visualisasi data berupa grafik batang untuk menggambarkan perbandingan penjualan di setiap kategori produk. Analisis "Best Selling Category" juga dapat digunakan dalam menetapkan prioritas untuk pengembangan produk, pemasaran, dan strategi bisnis lainnya guna mempertahankan keunggulan kompetitif di industri yang dinamis.
+
+df_top_cat = df.groupby(['product_category_name_english'])[['order_item_id']].sum().reset_index().sort_values(by='order_item_id',ascending=False).head(10)
+df_low_cat = df.groupby(['product_category_name_english'])[['order_item_id']].sum().reset_index().sort_values(by='order_item_id',ascending=True).head(10).sort_values(by='order_item_id',ascending=False)
+
+plt.figure(figsize=(15,3))
+
+plt.subplot(1,2,1)
+sns.barplot(data=df_top_cat,x='order_item_id',y='product_category_name_english')
+plt.xlabel('Total Item Order')
+plt.ylabel('Product Category')
+plt.title('Highest Selling Product Category',size=10)
+
+plt.subplot(1,2,2)
+sns.barplot(data=df_low_cat,x='order_item_id',y='product_category_name_english')
+plt.xlabel('Total Item Order')
+plt.ylabel('Product Category')
+plt.title('Lowest Performing Product Categories',size=10)
+
+plt.tight_layout()
+    Berdasarkan penjualan dari Oktober 2016 hingga Agustus 2018, kategori produk yang paling sering dibeli oleh pelanggan adalah kategori bed_bath_table, furniture_decor, dan health_beauty. Sedangkan, kategori produk yang paling sedikit dibeli adalah produk security_and_services, fashion_childrens_clothes, dan cds_dvds_musicals.
+#### **Demographic Area**
+
+Bagian ini bertujuan untuk menganalisis data demografis berdasarkan wilayah atau area geografis di platform e-commerce Olist. Analisis ini akan fokus pada dua aspek utama, yaitu total jumlah pelanggan (customer) dan total jumlah penjual (seller) di setiap wilayah. Data yang digunakan mencakup informasi tentang pelanggan dan penjual yang terdaftar di Olist, termasuk alamat dan informasi geografis terkait. Dengan melakukan analisis ini, dapat diidentifikasi wilayah-wilayah dengan pangsa pasar pelanggan dan penjual yang signifikan, serta menganalisis pola dan tren di setiap wilayah.
+
+
+***Total Customer by Area***
+df_customer_location = df[['customer_unique_id','customer_state','order_item_id','payment_value']].copy()
+total_customer_by_area = df_customer_location.groupby('customer_state')[['customer_unique_id']].nunique().reset_index()
+total_customer_by_area.head()
+# value for data
+geojson_data = r'br_states.geojson'  
+
+# Create a Folium map centered on Brazil
+brazil_map_customer = folium.Map(location=[-14.2350, -51.9253], zoom_start=4.5)
+
+# Add the Choropleth layer
+chor_area_customer = folium.Choropleth(
+    geo_data=geojson_data,
+    name='choropleth',
+    data=total_customer_by_area,
+    columns=['customer_state', 'customer_unique_id'],
+    key_on='feature.properties.nome',
+    fill_color='YlGn',
+    fill_opacity=0.7,
+    line_opacity=0.5,
+    legend_name='Total Customer',
+).add_to(brazil_map_customer)
+
+# Add markers with state names as labels
+gdf_customer = gpd.read_file(geojson_data)  # Read the GeoJSON data into a GeoDataFrame
+for _, row in gdf_customer.iterrows():
+    state_name = row['nome']
+    centroid = row['geometry'].centroid
+    lat, lon = centroid.y, centroid.x
+    folium.Marker(
+        location=[lat, lon],
+        icon=folium.DivIcon(html=f'<div style="font-weight:bold">{state_name}</div>')
+    ).add_to(brazil_map_customer)
+
+# Display the map
+brazil_map_customer
+
+    Berdasarkan data persebaran pelanggan, dapat dilihat bahwa saat ini lokasi pelanggan masih terpusat di daerah ibu kota dan sekitarnya, seperti Sao Paulo, Minas Gerais, dan Riio de Janeiro. Sedangkan, jumlah pelanggan di daerah lain tergolong masih sangat sedikit. Dapat disimpulkan bahwa penetrasi market di semua daerah Brazil belum maksimal.
+***Total Seller by Area***
+df_seller_location = df[['customer_unique_id','seller_state','order_item_id','payment_value']].copy()
+total_seller_by_area = df.groupby('seller_state')[['seller_id']].nunique().reset_index()
+total_seller_by_area.head()
+# value for data
+geojson_data_seller = r'br_states.geojson'  
+
+# Create a Folium map centered on Brazil
+brazil_map_seller = folium.Map(location=[-14.2350, -51.9253], zoom_start=4.5)
+
+# Add the Choropleth layer
+chor_by_seller_sales = folium.Choropleth(
+    geo_data=geojson_data_seller,
+    name='choropleth',
+    data=total_seller_by_area,
+    columns=['seller_state', 'seller_id'],
+    key_on='feature.properties.nome',
+    fill_color='YlGn',
+    fill_opacity=0.7,
+    line_opacity=0.5,
+    legend_name='Payment Value',
+).add_to(brazil_map_seller)
+
+# Add markers with state names as labels
+gdf_seller = gpd.read_file(geojson_data)  # Read the GeoJSON data into a GeoDataFrame
+for _, row in gdf_seller.iterrows():
+    state_name = row['nome']
+    centroid = row['geometry'].centroid
+    lat, lon = centroid.y, centroid.x
+    folium.Marker(
+        location=[lat, lon],
+        icon=folium.DivIcon(html=f'<div style="font-weight:bold">{state_name}</div>')
+    ).add_to(brazil_map_seller)
+
+# Display the map
+brazil_map_seller
+
+    Berdasarkan data lokasi penjual, dapat dilihat bahwa saat ini kerjasama dengan seller masih terpusat di daerah ibu kota dan sekitarnya, seperti Sao Paulo dan Parana. Sedangkan, jumlah penjual di daerah lain tergolong masih sangat sedikit. Bahkan, ada daerah-daerah yang sama sekali belum ada penjualnya seperti Acre, Palmas, Alagoas, Roraima, dan Amapa. Hal ini mungkin dapat menyebabkan kurangnya penetrasi market lokal.
+#### **Cohort Analysis**
+
+Cohort Analysis merupakan salah satu teknik analisis yang kuat dan bermanfaat dalam memahami perilaku pelanggan atau pengguna suatu platform atau bisnis dalam suatu periode waktu tertentu. Pada bagian ini pelanggan dikelompokkan berdasarkan waktu pendaftaran atau transaksi pertama mereka, dengan tujuan untuk memahami dan membandingkan perilaku pelanggan di setiap kelompok cohort. Dalam bagian ini, akan ada visualisasi data seperti heatmap dan line plot untuk mempresentasikan temuan analisis secara jelas dan komprehensif. 
+
+
+
+df_cohort = df[['customer_unique_id', 'order_purchase_timestamp']].copy()
+df_cohort.head()
+# Cohort Daily
+df_cohort['cohort_month'] = df_cohort.groupby('customer_unique_id')['order_purchase_timestamp'].transform('min')
+df_cohort['cohort_month'] = df_cohort['cohort_month'].dt.to_period('M')
+
+# Current Order
+df_cohort['current_order_month'] = df_cohort['order_purchase_timestamp'].dt.to_period('M')
+
+df_cohort.head()
+# n_customers
+df_cohort = df_cohort.groupby(by=['cohort_month', 'current_order_month'])[['customer_unique_id']].nunique().reset_index()
+df_cohort = df_cohort.rename(columns= {'customer_unique_id': 'n_customers'})
+
+
+df_cohort.head()
+# Period Number
+df_cohort['period_number'] = df_cohort['current_order_month'] - df_cohort['cohort_month']
+df_cohort['period_number'] = df_cohort['period_number'].apply(attrgetter('n'))
+df_cohort
+df_cohort_pivot = df_cohort.pivot_table(
+    index= 'cohort_month',
+    columns= 'period_number',
+    values='n_customers'
+)
+
+df_cohort_pivot
+df_cohort_percent = (df_cohort_pivot.div(df_cohort_pivot[0], axis=0) * 100).round(2)
+df_cohort_percent
+grid_kw = {
+    'height_ratios': (20, 1),       
+    'hspace': 0.2                   
+}
+
+
+fig, (ax_top, ax_bottom) = plt.subplots(nrows= 2, ncols= 1, figsize= (14, 7), gridspec_kw= grid_kw)
+
+sns.heatmap(
+    data= df_cohort_percent,
+    ax= ax_top,                                 
+    cbar_ax= ax_bottom,                         
+    cbar_kws= {'orientation': 'horizontal'},    
+    annot= True,                                
+    fmt= '.2f',                                 
+    cmap= 'YlGnBu',                             
+    linewidths= 2,
+    vmin= 0,
+    vmax= 100
+)
+ax_top.set_xlabel('Quarter Distance')
+ax_top.set_ylabel('Cohort Month')
+ax_top.set_title('Customer Retention Rate (%) based on Cohort Group')
+plt.show()
+    Berdasarkan retention rate nya, dapat disimpulkan bahwa pelanggan yang melakukan pemesanan di Olist sangat tidak aktif dan tidak loyal karena jarang melakukan repeat order. Dapat dilihat bahwa retention rate tiap bulan nya, selalu dibawah 1% dari bulan Oktober 2016 hingga Agustus 2018. 
+
+    Meskipun tiap bulannya, di tiap Cohort Group, ada pelanggan yang melakukan repeat order, tetapi jumlahnya sangat sedikit. Hal ini menggambarkan bahwa strategi pemasaran yang dilakukan oleh Olist dan penjualnya, belum dapat meningkatkan loyalitas.
+
+    Retention rate 100% terdapat pada Cohort Group 2016-12 bulan pertama (1), tetapi pada group tersebut hanya ada 1 customer. Sayangnya, pelanggan tersebut melakukan order di bulan berikutnya, tetapi tidak pernah melakukan order lagi (churn).
+df_new_customer = df_cohort_pivot[[0]].reset_index().rename(columns={0:'new_customer'})
+df_new_customer
+df_new_customer['cohort_month_str'] = df_new_customer['cohort_month'].astype(str)
+
+df_loyal_pivot = df_cohort.pivot_table(
+    index= 'cohort_month',
+    columns= 'period_number',
+    values='n_customers',
+    margins=True
+)
+
+df_loyal_customer = df_loyal_pivot.loc[['All']].transpose().iloc[:-1].reset_index().rename(columns={'All':'loyal_customer'})
+df_loyal_customer = pd.merge(left=df_loyal_customer, right=df_new_customer, left_index=True, right_index=True,how='left')
+df_loyal_customer = df_loyal_customer.iloc[1:].copy()
+df_loyal_customer
+plt.figure(figsize=(20,5))
+
+plt.subplot(1,2,1)
+sns.lineplot(data=df_new_customer,x='cohort_month_str',y='new_customer')
+sns.scatterplot(data=df_new_customer,x='cohort_month_str',y='new_customer')
+plt.xticks(rotation=90,size=10)
+plt.xlabel('Month')
+plt.ylabel('Total New Customer')
+plt.title('Total New Customer per Month from Oct-2016 to Aug-2018',size=12)
+
+plt.subplot(1,2,2)
+sns.lineplot(data=df_loyal_customer,x='cohort_month_str',y='loyal_customer')
+sns.scatterplot(data=df_loyal_customer,x='cohort_month_str',y='loyal_customer')
+plt.xticks(size=10,rotation=90)
+plt.xlabel('Month')
+plt.ylabel('Total Loyal Customer')
+plt.title('Total Loyal Customer per Month from Dec-2016 to Aug-2018',size=12)
+
+
+plt.tight_layout()
+    Berdasarkan jumlah pelanggan baru, terlihat bahwa sebenarya terjadi peningkatan jumlah pelanggan baru yang signifikan dari setiap bulannya. Akan tetapi, pelanggan-pelanggan ini tidak melakukan pembelian lagi, ditunjukkan dengan sangat rendahnya total pelanggan yang loyal. Hal ini menunjukkan bahwa sumber pemasukkan Olist sangat bergantung pada pelanggan baru. Ketika trend pemasukan mulai menurun di 5 bulan ke belakang, maka perlu strategi yang tepat untuk meningkatkan pendapatan. 
+    
+    Peningkatan pendapatan tidak dilakukan hanya dengan mencari pelanggan baru, tetapi dapat juga dilakukan dengan meningkatkan keaktifan pelanggan-pelanggan lama, dengan menarik mereka agar tertarik melakukan repeat order. Salah satu cara yang digunakan adalah dengan menggunakan personalized recommendation.
+#### **Other Analysis**
+
+Analisa data lainnnya dilakukan dengan menggunakan Tableu sebagai software visualisasi data. Hasil visualisasi project ini dapat dilihat melalui link ini https://public.tableau.com/shared/RXNZ93JSG?:display_count=n&:origin=viz_share_link.
+## **LRFM Analysis**
+
+LRFM Analysis adalah salah satu teknik analisis yang berguna dalam menganalisis dan mengelompokkan pelanggan berdasarkan pola pembelian mereka. Singkatan LRFM mengacu pada:
+
+1) Length (L): Lamanya waktu atau durasi pelanggan telah berinteraksi atau berhubungan dengan bisnis atau platform. Lamanya hubungan dengan pelanggan dapat menjadi faktor yang penting dalam menganalisis kesetiaan pelanggan dan retensi.
+2) Recency (R): Waktu sejak pelanggan melakukan transaksi terakhir. Pelanggan yang melakukan pembelian baru-baru ini dianggap lebih berharga daripada yang tidak aktif dalam waktu yang lama.
+3) Frequency (F): Frekuensi pembelian oleh pelanggan selama periode waktu tertentu. Pelanggan yang sering melakukan pembelian cenderung lebih berharga bagi bisnis.
+4) Monetary Value (M): Jumlah uang yang dihabiskan oleh pelanggan selama periode waktu tertentu. Pelanggan yang mengeluarkan lebih banyak uang cenderung lebih berharga bagi bisnis.
+
+Metode ini digunakan untuk mengelompokkan pelanggan ke dalam segmen-segmen berdasarkan kombinasi Length, Recency, Frequency, dan Monetary Value mereka. Analisis ini akan membantu mengidentifikasi segmen pelanggan yang paling berharga bagi Olist, serta memahami pola pembelian dan preferensi yang berbeda di antara segmen-segmen tersebut.
+
+Hasil analisis ini akan membantu Olist dalam merancang strategi pemasaran yang lebih efektif, memberikan penawaran khusus yang disesuaikan dengan setiap segmen pelanggan, dan meningkatkan kepuasan pelanggan secara keseluruhan.
+### **Length**
+
+Pada bagian ini akan dilakukan pemberian nilai kepada tiap pelanggan berdasarkan lama waktu pelanggan menjadi member (tenure) dan melakukan transaksi di platfrom Olist. Skala skoring nya adalah 1 sampai 5, semakin besar nilai nya semakin lama pelanggan tersebut aktif melakukan transaksi.
+
+(Nilai 1 melambangkan pelanggan yang tenure nya rendah/sebentar, sedangkan Nilai 5 melambangkan pelanggan yang tenur nya tinggi/lama).
+df_length = df[['customer_unique_id','order_purchase_timestamp']].copy()
+df_length['first_purchase_date'] = df_length.groupby('customer_unique_id')['order_purchase_timestamp'].transform('min')
+df_length['last_purchase_date'] = df_length.groupby('customer_unique_id')['order_purchase_timestamp'].transform('max')
+df_length = df_length.drop(columns='order_purchase_timestamp')
+df_length = df_length.drop_duplicates()
+df_length.head()
+df_length['tenure_in_days'] = (df_length['last_purchase_date'] - df_length['first_purchase_date']).dt.days
+df_length
+min_length = df_length['tenure_in_days'].min()
+max_length = df_length['tenure_in_days'].max()+1
+length_boundaries = np.percentile((min_length,max_length), [0, 20, 40, 60, 80, 100])
+length_scores = [1,2,3,4,5]
+df_length['length_score'] = pd.cut(df_length['tenure_in_days'], bins=length_boundaries, labels=length_scores, right=False)
+df_length.head()
+df_tenure_days = df_length[['customer_unique_id','tenure_in_days']]
+df_tenure_days.head()
+df_length_score = df_length[['customer_unique_id','length_score']]
+df_length_score.head()
+### **Recency**
+
+Pada bagian ini akan dilakukan pemberian nilai kepada tiap pelanggan berdasarkan tanggal terakhir pelanggan tersebut melakukan pemesanan dari data diambil. Skala skoring nya adalah 1 sampai 5, semakin besar nilai nya semakin dekat tanggal pelanggan tersebut melakukan pemesanan dengan tanggal pengambilan data.
+
+(Nilai 1 melambangkan pelanggan yang sudah lama tidak melakukan pembelian, sedangkan Nilai 5 melambangkan pelanggan yang melakukan pembelian baru-baru ini / mendekati tanggal pengambilan data).
+max_date = df['order_purchase_timestamp'].max() + pd.DateOffset(days=1)
+df_recency = df[['customer_unique_id','order_purchase_timestamp']].copy()
+df_recency['last_purchase_date'] = df_recency.groupby('customer_unique_id')['order_purchase_timestamp'].transform('max')
+df_recency.head()
+df_recency = df_recency.drop(['order_purchase_timestamp'], axis=1)
+df_recency = df_recency.drop_duplicates()
+df_recency.head()
+df_recency['recency_in_days'] = (max_date - df_recency['last_purchase_date']).dt.days
+df_recency.head()
+min_recency = df_recency['recency_in_days'].min()
+max_recency = df_recency['recency_in_days'].max()+1
+recency_boundaries = np.percentile((min_recency,max_recency), [0, 20, 40, 60, 80, 100])
+recency_scores = [5,4,3,2,1]
+df_recency['recency_score'] = pd.cut(df_recency['recency_in_days'], bins=recency_boundaries, labels=recency_scores, right=False)
+df_recency.head()
+df_recency_days = df_recency[['customer_unique_id','recency_in_days']].copy()
+df_recency_days.head()
+df_recency_score = df_recency[['customer_unique_id','recency_score']].copy()
+df_recency_score.head()
+### **Frequency**
+
+Pada bagian ini akan dilakukan pemberian nilai kepada tiap customer berdasarkan banyaknya pelanggan melakukan transaksi di platfrom Olist. Skala skoring nya adalah 1 sampai 5, semakin besar nilai nya semakin banyak pemesanan yang telah dilakukan pelanggan tersebut.
+
+(Nilai 1 melambangkan pelanggan melakukan order 1x, Nilai 2 melambangkan pelanggan melakukan order 2x, Nilai 3 melambangkan pelanggan melakukan order 3x, Nilai 4 melambangkan pelanggan melakukan order 4x, sedangkan Nilai 5 melambangkan pelanggan melakukan order lebih dari 5x).
+df_frequency = df[['customer_unique_id','order_purchase_timestamp']].copy()
+df_frequency.shape
+df_frequency = df_frequency.drop_duplicates()
+df_frequency.head()
+freq_count = pd.DataFrame(df_frequency['customer_unique_id'].value_counts()).reset_index().rename(columns={'customer_unique_id':'frequency','index':'customer_unique_id'})
+freq_count.head()
+freq_boundaries = [1,2,3,4,5, float('inf')]
+freq_scores = [1,2,3,4,5]
+freq_count['frequency_score'] = pd.cut(freq_count['frequency'], bins=freq_boundaries, labels=freq_scores, right=False)
+
+freq_count.head()
+df_frequency_count = freq_count[['customer_unique_id','frequency']].copy()
+df_frequency_count.head()
+df_frequency_score = freq_count[['customer_unique_id','frequency_score']].copy()
+df_frequency_score.head()
+### **Monetary**
+
+Pada bagian ini akan dilakukan pemberian nilai kepada tiap pelanggan berdasarkan banyaknya uang yang telah dibayarkan di platfrom Olist pada periode yang ditetapkan. Skala skoring nya adalah 1 sampai 5, semakin besar nilai nya semakin besar nilai transaksi pelanggan tersebut.
+
+(Nilai 1 melambangkan pelanggan yang spending nya rendah, sedangkan Nilai 5 melambangkan pelanggan yang spendingnya tinggi).
+
+df_monetary = df.groupby('customer_unique_id')[['payment_value']].sum().reset_index()
+df_monetary.head()
+min_paid_value = df_monetary['payment_value'].min()
+max_paid_value = df_monetary['payment_value'].max()+1
+monetary_boundaries = np.percentile((min_paid_value,max_paid_value), [0, 20, 40, 60, 80, 100])
+monetary_scores = [1,2,3,4,5]
+df_monetary['monetary_score'] = pd.cut(df_monetary['payment_value'], bins=monetary_boundaries, labels=monetary_scores, right=False)
+df_monetary.head()
+df_monetary_value = df_monetary[['customer_unique_id','payment_value']].copy()
+df_monetary_value.head()
+df_monetary_score = df_monetary[['customer_unique_id','monetary_score']].copy()
+df_monetary_score.head()
+## **LRFM Clustering**
+
+### **Manual Clustering**
+
+Pada bagian ini dilakukan pemberian cluster secara manual berdasarkan score LRFM yang telah dibuat sebelumnya. Dengan asumsi bahwa bobot ke-empatnya sama (memiliki kepentingan yang sama), maka ke-empat LRFM score sebelumnya dirata-ratakan untuk menentukan nilai LRFM dari masing-masing pelanggan. Nilai pelanggan ini di cluster (kelompokkan berdasarkan rata-ratanya), sehingga diperoleh cluster LRFM manual dari Cluster 1 hingga Cluster 5.
+dataframes = [df_tenure_days, df_recency_days, df_frequency_count, df_monetary_value]
+
+# Merge the dataframes based on 'customer_unique_id'
+df_lrfm = dataframes[0]
+for i in range(1, len(dataframes)):
+    df_lrfm = pd.merge(df_lrfm, dataframes[i], on='customer_unique_id', how='left')
+
+df_lrfm.head()
+dataframes = [df_length_score, df_recency_score, df_frequency_score, df_monetary_score]
+
+# Merge the dataframes based on 'customer_unique_id'
+df_lrfm_score = dataframes[0]
+for i in range(1, len(dataframes)):
+    df_lrfm_score = pd.merge(df_lrfm_score, dataframes[i], on='customer_unique_id', how='inner')
+
+category_columns = ['length_score', 'recency_score', 'frequency_score', 'monetary_score']  
+df_lrfm_score[category_columns] = df_lrfm_score[category_columns].astype('int')  
+df_lrfm_score['lrfm_score'] = df_lrfm_score.mean(axis=1,numeric_only=True)
+
+df_lrfm_score.head()
+df_lrfm_score['lrfm_score'].value_counts()
+lrfm_boundaries = [1, 1.25, 1.5, 1.75, 2,  float('inf')]
+lrfm_scores = [1,2,3,4,5]
+df_lrfm_score['lrfm_score'] = pd.cut(df_lrfm_score['lrfm_score'], bins=lrfm_boundaries, labels=lrfm_scores, right=False)
+df_lrfm_score.head()
+df_lrfm_score['lrfm_score'].value_counts()
+df_cluster_lrfm_manual = pd.merge(left=df_lrfm,right=df_lrfm_score,on='customer_unique_id',how='left')
+df_cluster_lrfm_manual = df_cluster_lrfm_manual[['customer_unique_id', 'tenure_in_days', 'recency_in_days', 'frequency', 'payment_value', 'lrfm_score']]
+df_cluster_lrfm_manual.head()
+df_cluster_lrfm_manual = df_lrfm.copy()
+df_cluster_lrfm_manual = pd.merge(left=df_lrfm,right=df_lrfm_score,on='customer_unique_id',how='left')
+df_cluster_lrfm_manual = df_cluster_lrfm_manual[['customer_unique_id', 'tenure_in_days', 'recency_in_days', 'frequency', 'payment_value', 'lrfm_score']]
+df_cluster_lrfm_manual.head()
+fig_cluster_lrfm_manual = px.scatter_3d(
+    df_cluster_lrfm_manual, 
+    y= 'recency_in_days', 
+    x= 'frequency', 
+    z= 'payment_value',
+    color= df_cluster_lrfm_manual['lrfm_score'].astype(str),
+)
+
+fig_cluster_lrfm_manual.update_traces(marker_size = 2)
+
+fig_cluster_lrfm_manual.update_layout(
+    autosize=False,
+    width=1000,
+    height=500,
+    paper_bgcolor="white",
+)
+
+fig_cluster_lrfm_manual.show()
+plt.figure(figsize=(20,5))
+sns.scatterplot(
+    data=df_cluster_lrfm_manual,
+    x='recency_in_days',
+    y='tenure_in_days',
+    hue='lrfm_score'
+    )
+plt.title('Tenure vs Recency in Manual Clustering 5K')
+plt.show()
+Berdasarkan pemetaan pada grafik 3D dan scatterplot 2D, dapat diidentifikasi bahwa:
+
+- **Cluster 1** : customer yang tenure nya sangat sebentar (dibawah 100 hari), sudah lama tidak melakukan transaksi (diatas 500 hari yang lalu), melakukan transaksi hanya 1x, dengan spending yang sangat rendah.
+
+- **Cluster 2** : customer yang tenure nya sangat sebentar (dibawah 100 hari), cukup lama tidak melakukan transaksi (diatas 400 hari yang lalu), melakukan transaksi 1 hingga 2 kali (tetapi mayoritas 1x), dengan spending yang rendah.
+
+- **Cluster 3** : customer yang tenure nya cukup sebentar (dibawah 200 hari), cukup lama tidak melakukan transaksi (diatas 250 hari yang lalu), melakukan transaksi 1 hingga 2 kali (tetapi mayoritas 1x), dengan spending yang rendah.
+
+- **Cluster 4** : customer yang tenure nya cukup sebentar (dibawah 200 hari), cukup recent melakukan transaksi (diatas 100 hari yang lalu), melakukan transaksi 1 hingga 2 kali, dengan spending yang cukup tinggi.
+
+- **Cluster 5** : customer yang tenure nya bervariasi (ada yang hingga 600 hari), cukup recent melakukan transaksi (tetapi bervariasi), melakukan transaksi bervariasi jumlahnya, dengan spending yang bervariasi juga (ada yang tinggi).
+***Silhouette Score***
+X_lrfm_no_ml = df_cluster_lrfm_manual[['customer_unique_id', 'tenure_in_days', 'recency_in_days', 'frequency','payment_value']].copy().set_index('customer_unique_id')
+scaler = RobustScaler()
+X_lrfm_no_ml_scaled = scaler.fit_transform(X_lrfm_no_ml)
+lrfm_no_ml_labels = np.array(df_cluster_lrfm_manual['lrfm_score'].to_list())
+sil_score_lrfm_no_ml = (silhouette_score(X_lrfm_no_ml_scaled, lrfm_no_ml_labels, random_state = 42))
+sil_score_lrfm_no_ml
+    Dalam kasus clustering manual berdasarkan LRFM, nilai silhouette score yang diperoleh adalah -0.2039509825857462. Hal ini menunjukkan bahwa titik data cenderung ditempatkan dalam klaster yang salah atau memiliki tingkat keterpisahan yang rendah dengan klaster tempat ia ditempatkan. Dapat disimpulkan juga bahwa klasterisasi yang digunakan mungkin tidak optimal atau ada penyebaran yang signifikan antara klaster yang ada. Bisa dilihat juga dari grafik yang telah dibuat sebelumnya, bahwa banyak sekali overlapping antara satu cluster dengan cluster lainnya. Maka dari itu, clustering manual ini dapat dikatakan tidak baik untuk digunakan pengelompokkan customer berdasarkan LRFM nya.
+### **K-Means Clustering**
+
+Pada bagian ini dilakukan clustering dengan menggunakan algoritma K-Means, dengan pembagian jumlah cluster yang telah ditentukan yaitu 5 cluster. Pembagian ini disesuaikand dengan business practice di industry retail dan juga sumber academic paper seperti yang ada pada link ini: https://www.researchgate.net/publication/315979555_LRFMP_model_for_customer_segmentation_in_the_grocery_retail_industry_a_case_study
+
+Secara terpisah, sudah dilakukan juga percobaan looping/tuning untuk best cluster. Akan tetapi, berdasarkan hasil looping, ditemukan bahwa dengan dataset yang ada, jumlah cluster yang terbaik adalah 10 cluster (silhoutte score = 1, dengan kata lain sempurna). Akan tetapi, jumlah cluster sebanyak ini sangat jarang ditemukan untuk pengelompokkan pelanggan di industry retail. Maka dari itu, jumlah cluster yang digunakan adalah yang telah ditetapkan sebelumnya yaitu 5 cluster.
+scaler = RobustScaler()
+X_clustering = df_lrfm_score.drop(columns='lrfm_score').set_index('customer_unique_id')
+X_clustering_scaled = scaler.fit_transform(X_clustering)
+kmean_5k = KMeans(n_clusters=5, random_state=42, n_init='auto')
+kmean_5k.fit(X_clustering_scaled)
+cluster_kmeans5 = kmean_5k.labels_
+X_clustering['cluster_lrfm'] = cluster_kmeans5
+X_clustering = X_clustering.reset_index()
+X_clustering.head()
+df_cluster = X_clustering[['customer_unique_id','cluster_lrfm']]
+df_clustering = pd.merge(left=df_lrfm,right=df_cluster,on='customer_unique_id',how='left')
+df_clustering
+***Silhouette Score***
+X_lrfm_kmeans = df_clustering[['customer_unique_id', 'tenure_in_days', 'recency_in_days', 'frequency','payment_value']].copy().set_index('customer_unique_id')
+scaler = RobustScaler()
+X_lrfm_kmeans_scaled = scaler.fit_transform(X_lrfm_kmeans)
+lrfm_kmeans_labels = np.array(df_clustering['cluster_lrfm'].to_list())
+sil_score_lrfm_kmeans = (silhouette_score(X_lrfm_kmeans_scaled, lrfm_kmeans_labels, random_state = 42))
+sil_score_lrfm_kmeans
+df_sil_score_lrfm_clustering = pd.DataFrame()
+df_sil_score_lrfm_clustering['sil_score_manual'] = [sil_score_lrfm_no_ml]
+df_sil_score_lrfm_clustering['sil_score_kmeans'] = [sil_score_lrfm_kmeans]
+df_sil_score_lrfm_clustering
+    Dalam kasus clustering menggunakan algoritma K-Means berdasarkan nilai LRFM customer, nilai silhouette score yang diperoleh adalah 0.07313490897748755. Hal ini menunjukkan bahwa titik data tersebut cenderung memiliki tingkat keterpisahan yang rendah dengan klaster tempat ia ditempatkan, namun secara keseluruhan masih cenderung cocok dalam klasternya. Meskipun nilainya positif, nilai sil score yang mendekati nol menandakan bahwa pemisahan antara klaster tidak terlalu jelas dan ada sejumlah tumpang tindih antara klaster.
+
+    Akan tetapi, nilai silhouette score menggunakan algoritma K-Means sudah mengalami peningkatan yang cukup signifikan dibanding dengan clustering manual. Maka dari itu, dapat disimpulkan bahwa metode yang lebih baik untuk mengelompokkan customer berdasarkan LRFM score nya adalah metode K-Means.
+
+fig = px.scatter_3d(
+    df_clustering, 
+    y= 'recency_in_days', 
+    x= 'frequency', 
+    z= 'payment_value',
+    color= df_clustering['cluster_lrfm'].astype(str),
+)
+
+fig.update_traces(marker_size = 2)
+
+fig.update_layout(
+    autosize=False,
+    width=1000,
+    height=500,
+    paper_bgcolor="white",
+)
+
+fig.show()
+plt.figure(figsize=(20,5))
+sns.scatterplot(
+    data=df_clustering,
+    x='recency_in_days',
+    y='tenure_in_days',
+    hue='cluster_lrfm',
+    palette='viridis'
+    )
+plt.title('Tenure vs Recency in K-Means Clustering 5K')
+plt.show()
+Berdasarkan pemetaan pada grafik 3D dan scatterplot 2D, dapat diidentifikasi bahwa:
+
+- **Cluster 4** : customer dengan tenure lama (diatas 100 hari), melakukan pembelian terakhir cukup bervariasi (ada yang recent ada yang sudah lama) melakukan transaksi lebih dari 2x, dan memiliki nilai spending yang cukup rendah </br>
+
+- **Cluster 2**: customer dengan tenure sebentar (dibawah 100 hari), melakukan pembelian terakhir cukup dekat (paling lambat dibawah 150 hari yang lalu), melakukan transaksi 1 hingga 2 kali, dan memiliki nilai spending bervariasi dan ada yang tinggi (proporsi normal) </br>
+
+- **Cluster 0** : customer dengan tenure sebentar (dibawah 100 hari), melakukan pembelian terakhir cukup dekat (antara 150-280 hari yang lalu) melakukan transaksi 1 hingga 2 kali, dan memiliki nilai spending bervariasi dan ada yang tinggi (proporsi normal) </br>
+
+- **Cluster 3** : customer dengan tenure sebentar (dibawah 100 hari), melakukan pembelian terakhir cukup lama (antara 280-420 hari yang lalu) melakukan transaksi 1 hingga 2 kali, dan memiliki nilai spending bervariasi dan ada yang sangat tinggi</br>
+
+- **Cluster 1** : customer dengan tenure sebentar (dibawah 100 hari), melakukan pembelian terakhir cukup lama (di atas 420 hari yang lalu), melakukan transaksi 1 hingga 2 kali,  dan memiliki nilai spending paling rendah</br>
+
+***Customer Lifetime Value Calculation***
+
+Customer Lifetime Value atau disingkat CLV adalah ukuran yang digunakan untuk memvaluasi nilai monetaris yang dihasilkan oleh pelanggan selama mereka menjadi customer. Tujuan dilakukan nya analisa ini adalah untuk mengidentifikasi dan memahami customer dengan karakteristik apa yang bernilai tinggi dalam jangka panjang.
+df_clv = df_lrfm.copy()
+df_clv['CLV'] = df_clv['payment_value']*df_clv['tenure_in_days']
+df_clv_cluster = pd.merge(left=df_clv,right=df_cluster,on='customer_unique_id',how='left')
+df_clv_cluster
+plt.figure(figsize=(5,5))
+sns.scatterplot(
+    data=df_clv_cluster,
+    x='CLV',
+    y='tenure_in_days',
+    hue='cluster_lrfm',
+    palette='viridis'
+    )
+plt.title('Customer Lifetime Value based on K-Means Cluster 5K')
+plt.show()
+    Berdasarkan CLV nya, dapat dilihat bahwa nilai CLV tertinggi berada pada Cluster 4, sedangkan untuk cluster lainnya memiliki nilai CLV yang hampir serupa. Dapat disimpulkan bahwa Cluster 4 merupakan cluster terbaik (Very High Value Customer). Karena karakteristiknya hampir serupa, maka urutan cluster lainnya diurutkan berdasarkan recency nya, yaitu dari yang paling dekat dengan data diambil hingga paling lama.
+
+- **Cluster 4** akan dinamakan Cluster Very High Value Customer.
+
+- **Cluster 2** akan dinamakan Cluster High Value Customer.
+
+- **Cluster 0** akan dinamakan Cluster Medium Value Customer.
+
+- **Cluster 3** akan dinamakan Cluster Low Value Customer.
+
+- **Cluster 1** akan dinamakan Cluster Very Low Value Customer.
+df_clustering['cluster_lrfm'] = df_clustering['cluster_lrfm'].replace({
+    4 : "Very High Value Customer",
+    2 : "High Value Customer",
+    0 : "Medium Value Customer",
+    3 : "Low Value Customer",
+    1 : "Very Low Value Customer"
+})
+
+df_clustering.head()
+df_cluster_lrfm = df_clustering[['customer_unique_id','cluster_lrfm']].copy()
+df_cluster_lrfm.head()
+## **Geographic Clustering**
+
+Clustering ini bertujuan untuk mengelompokkan wilayah geografis atau area berdasarkan karakteristik tertentu. Dalam konteks proyek ini, digunakan data demografis dan geografis pelanggan serta penjual untuk mengidentifikasi pola dan korelasi antara area geografis tertentu dengan perilaku pembelian atau penjualan. Dengan menggunakan teknik clustering, akan dibentuk kelompok-kelompok atau cluster berdasarkan kesamaan geografis, dan kemudian menganalisis atribut-atribut seperti jumlah pelanggan dan total penjualan di setiap cluster.
+
+customer_count = total_customer_by_area.rename(columns={'customer_unique_id':'total_customer'}).reset_index(drop=True)
+customer_count.head()
+seller_count = total_seller_by_area.rename(columns={'seller_id':'total_seller'}).reset_index(drop=True)
+seller_count.head()
+location_count = pd.merge(left=customer_count,right=seller_count,left_on='customer_state',right_on='seller_state',how='left')
+location_count = location_count.drop(columns='seller_state').rename(columns={'customer_state':'state_name'})
+location_count['total_seller'] = location_count['total_seller'].fillna(0).astype(int)
+location_count.head()
+np.percentile(location_count['total_customer'], [0,25,75])
+np.percentile(location_count['total_seller'], [0,25,75])
+customer_area_boundaries = [38,  355, 2555, float('inf')]
+seller_area_boundaries = [0,  1 , 33.5, float('inf')]
+area_scores = [1,2,3]
+
+location_count['customer_area_score'] = pd.cut(location_count['total_customer'], bins=customer_area_boundaries, labels=area_scores, right=False)
+location_count['seller_area_score'] = pd.cut(location_count['total_seller'], bins=seller_area_boundaries, labels=area_scores, right=False)
+
+
+location_count.head()
+
+### **Manual Clustering**
+
+Pada bagian ini, pengelompokkan wilayah dilakukan secara manual dengan memberikan scoring terhadap wilayah berdasarkan jumlah pelanggan yang ada di daerah tersebut dan jumlah penjual yang ada di daerah tersebut. Skala skor nya adalah 1 hingga 3, dimana semakin besar skor nya, semakin banyak jumlah pelanggan dan penjualnya.
+category_columns = ['customer_area_score', 'seller_area_score']  
+location_count[category_columns] = location_count[category_columns].astype('int')  
+location_count['area_score'] = ((location_count['customer_area_score'] + location_count['seller_area_score'])/2)
+
+location_count.head()
+np.percentile(location_count['area_score'], [0,25,75])
+area_boundaries = [1, 1.5, 2.5, float('inf')]
+area_scores = [1,2,3]
+
+location_count['area_score'] = pd.cut(location_count['area_score'], bins=area_boundaries, labels=area_scores, right=False)
+
+location_count.head()
+
+# value for data
+geojson_data = r'br_states.geojson'  
+
+# Create a Folium map centered on Brazil
+brazil_map_area = folium.Map(location=[-14.2350, -51.9253], zoom_start=4.5)
+
+# Add the Choropleth layer
+chor_area = folium.Choropleth(
+    geo_data=geojson_data,
+    name='choropleth',
+    data=location_count,
+    columns=['state_name', 'area_score'],
+    key_on='feature.properties.nome',
+    fill_color='YlGn',
+    fill_opacity=0.7,
+    line_opacity=0.5,
+    legend_name='Area Score',
+).add_to(brazil_map_area)
+
+# Add markers with state names as labels
+gdf_area = gpd.read_file(geojson_data)  # Read the GeoJSON data into a GeoDataFrame
+for _, row in gdf_area.iterrows():
+    state_name = row['nome']
+    centroid = row['geometry'].centroid
+    lat, lon = centroid.y, centroid.x
+    folium.Marker(
+        location=[lat, lon],
+        icon=folium.DivIcon(html=f'<div style="font-weight:bold">{state_name}</div>')
+    ).add_to(brazil_map_area)
+
+# Display the map
+brazil_map_area
+
+plt.figure(figsize=(20,5))
+sns.scatterplot(
+    data=location_count,
+    x='total_customer',
+    y='total_seller',
+    hue='area_score',
+    )
+plt.title('Total Customer vs Total Seller in Area Manual Clustering')
+
+plt.show()
+Berdasarkan pemetaan pada grafik area dan scatterplot 2D, dapat diidentifikasi bahwa:
+
+- **Cluster 1** : area yang jumlah pelanggan dan jumlah penjualnya banyak.
+
+- **Cluster 2** : area yang jumlah pelanggannya cukup banyak, tetapi jumlah penjualnya sedikit.
+
+- **Cluster 3** : area yang jumlah pelanggan dan jumlah penjualnya sedikit (bahkan ada yang kosong).
+***Silhouette Score***
+X_area_no_ml = location_count[['state_name','total_customer','total_seller']].copy().set_index('state_name')
+X_area_no_ml.head()
+X_area_no_ml_scaled = scaler.fit_transform(X_area_no_ml)
+area_no_ml_labels = np.array(location_count['area_score'].to_list())
+sil_score_area_no_ml = (silhouette_score(X_area_no_ml_scaled, area_no_ml_labels, random_state = 42))
+sil_score_area_no_ml
+    Dalam kasus clustering manual berdasarkan wilayah, nilai silhouette score yang diperoleh adalah -0.10328163012787804. Hal ini menunjukkan bahwa titik data cenderung ditempatkan dalam klaster yang salah atau memiliki tingkat keterpisahan yang rendah dengan klaster tempat ia ditempatkan. Dapat disimpulkan juga bahwa klasterisasi yang digunakan mungkin tidak optimal atau ada penyebaran yang signifikan antara klaster yang ada. Bisa dilihat juga dari grafik yang telah dibuat sebelumnya, bahwa banyak sekali overlapping antara satu cluster dengan cluster lainnya. Maka dari itu, clustering manual ini dapat dikatakan tidak baik untuk digunakan pengelompokkan area berdasarkan jumlah pelanggan dan pelanggan nya.
+### **K-Means Clustering**
+
+Pada bagian ini dilakukan clustering dengan menggunakan algoritma K-Means, dengan pembagian jumlah cluster yang diiterasi dengan forloop agar diketahui berapa jumlah cluster yang terbaik untuk pengelompokkan area nya.
+X_area_clustering = location_count[['state_name','total_customer','total_seller']].copy().set_index('state_name')
+X_area_clustering.head()
+# scaling
+X_area_clustering_scaled = scaler.fit_transform(X_area_clustering)
+list_n_clusters = range(2,16)
+list_inertia = []
+list_sil = []
+
+
+for i in list_n_clusters:
+
+    # define algo
+    kmeans = KMeans(n_clusters=i, random_state=42,n_init='auto') 
+
+    # fit
+    kmeans.fit(X_area_clustering_scaled)
+
+    # kmeans memberi nama cluster pada tiap data poin
+    kmeans.labels_ 
+
+    # inertia
+    inertia = kmeans.inertia_
+    cluster_name = kmeans.labels_
+    sil = (silhouette_score(X_area_clustering_scaled, cluster_name, random_state = 42))
+
+    list_inertia.append(inertia)
+    list_sil.append(sil)
+df_kmeans = pd.DataFrame()
+df_kmeans['n_clusters'] = list_n_clusters
+df_kmeans['inertia'] = list_inertia
+df_kmeans['silhouette_score'] = list_sil
+
+df_kmeans.sort_values(by='silhouette_score',ascending=False)
+    Berdasarkan hasil iterasi, ditemukan bahwa nilai silhouette score paling baik berada pada clustering dengan jumlah cluster 2K. Maka dari itu, saat ini dicoba untuk dianalisa lebih lanjut menggunakan 2 cluster.
+# modeling
+kmean_2k = KMeans(n_clusters=2, random_state=42, n_init='auto')
+kmean_2k.fit(X_area_clustering_scaled)
+
+# labels
+cluster_kmeans2 = kmean_2k.labels_
+X_area_clustering['cluster_2k'] = cluster_kmeans2
+X_area_clustering = X_area_clustering.reset_index()
+X_area_clustering.head()
+X_area_clustering['cluster_2k'].value_counts()
+# value for data
+geojson_data = r'br_states.geojson'  
+
+# Create a Folium map centered on Brazil
+brazil_map_area_2cluster = folium.Map(location=[-14.2350, -51.9253], zoom_start=4.5)
+
+# Add the Choropleth layer
+chor_area_2k = folium.Choropleth(
+    geo_data=geojson_data,
+    name='choropleth',
+    data=X_area_clustering,
+    columns=['state_name', 'cluster_2k'],
+    key_on='feature.properties.nome',
+    fill_color='YlGn',
+    fill_opacity=0.7,
+    line_opacity=0.5,
+    legend_name='Area Cluster',
+).add_to(brazil_map_area_2cluster)
+
+# Add markers with state names as labels
+gdf_area_2k = gpd.read_file(geojson_data)  # Read the GeoJSON data into a GeoDataFrame
+for _, row in gdf_area_2k.iterrows():
+    state_name = row['nome']
+    centroid = row['geometry'].centroid
+    lat, lon = centroid.y, centroid.x
+    folium.Marker(
+        location=[lat, lon],
+        icon=folium.DivIcon(html=f'<div style="font-weight:bold">{state_name}</div>')
+    ).add_to(brazil_map_area_2cluster)
+
+# Display the map
+brazil_map_area_2cluster
+
+plt.figure(figsize=(20,5))
+sns.scatterplot(
+    data=X_area_clustering,
+    x='total_customer',
+    y='total_seller',
+    hue='cluster_2k',
+    )
+plt.title('Total Customer vs Total Seller in K-Means Clustering 2K')
+
+plt.show()
+    Berdasarkan pemetaan pada grafik area dan scatterplot 2D, dapat dilihat bahwa pada clustering dengan 2 cluster, terdapat jumlah anggota cluster yang sangat berbeda. Cluster 1 hanya memiliki 1 Area (Sao Paulo), sedangkan sisanya masuk ke Cluster 0. Hal ini disebabkan karena Sao Paulo memang memiliki banyak pelanggan dan penjual yang sangat tinggi (berbeda secara signifikan) dibandingkan dengan area lainnya. Maka dari itu, clustering ini kurang informatif untuk keperluan bisnis. Sehingga, perlu dicari jumlah cluster lain agar bisa lebih membantu analisa bisnis. Pada proyek ini dicoba pilihan kedua berdasarkan nilai silhouette tertinggi ke-2 yaitu 3 cluster.
+# modeling
+kmean_3k = KMeans(n_clusters=3, random_state=42, n_init='auto')
+kmean_3k.fit(X_area_clustering_scaled)
+
+# labels
+cluster_kmeans3 = kmean_3k.labels_
+X_area_clustering['cluster_3k'] = cluster_kmeans3
+X_area_clustering.head()
+X_area_clustering['cluster_3k'].value_counts()
+***Silhouette Score***
+sil_score_area_kmeans_3k = df_kmeans[df_kmeans['n_clusters']==3]['silhouette_score'].loc[1]
+df_sil_score_area_clustering = pd.DataFrame()
+df_sil_score_area_clustering['sil_score_manual'] = [sil_score_area_no_ml]
+df_sil_score_area_clustering['sil_score_kmeans'] = [sil_score_area_kmeans_3k]
+df_sil_score_area_clustering
+    Dalam kasus clustering wilayah menggunakan algoritma K-Means dengan jumlah cluster 3 clusters, nilai silhouette score yang diperoleh adalah 0.784953. Hal ini menunjukkan bahwa klasterisasi yang dilakukan sangat baik dan titik data dalam klaster tersebut memiliki tingkat keterpisahan yang tinggi. Nilai Silhouette Score yang mendekati 1 menunjukkan bahwa titik data cenderung sangat cocok dengan klaster tempat ia ditempatkan dan memiliki tingkat kesamaan yang tinggi dengan anggota klaster lainnya.
+
+    Silhouette score ini juga mengindikasikan bahwa pengelompokan data tersebut relatif homogen dan kompak dalam klasternya. Hal ini menandakan bahwa data-data yang berada dalam klaster tersebut memiliki karakteristik yang mirip satu sama lain, dan perbedaan antara klaster sangat jelas.
+
+    Nilai silhouette score menggunakan algoritma K-Means sudah mengalami peningkatan yang cukup signifikan dibanding dengan clustering manual. Maka dari itu, dapat disimpulkan bahwa metode yang lebih baik untuk mengelompokkan area berdasarkan jumlah pelanggan dan penjual nya adalah metode K-Means.
+# value for data
+geojson_data = r'br_states.geojson'  
+
+# Create a Folium map centered on Brazil
+brazil_map_3cluster = folium.Map(location=[-14.2350, -51.9253], zoom_start=4.5)
+
+# Add the Choropleth layer
+chor_area_3k = folium.Choropleth(
+    geo_data=geojson_data,
+    name='choropleth',
+    data=X_area_clustering,
+    columns=['state_name', 'cluster_3k'],
+    key_on='feature.properties.nome',
+    fill_color='YlGn',
+    fill_opacity=0.7,
+    line_opacity=0.5,
+    legend_name='Area Cluster',
+).add_to(brazil_map_3cluster)
+
+# Add markers with state names as labels
+gdf_area_3k = gpd.read_file(geojson_data)  # Read the GeoJSON data into a GeoDataFrame
+for _, row in gdf_area_3k.iterrows():
+    state_name = row['nome']
+    centroid = row['geometry'].centroid
+    lat, lon = centroid.y, centroid.x
+    folium.Marker(
+        location=[lat, lon],
+        icon=folium.DivIcon(html=f'<div style="font-weight:bold">{state_name}</div>')
+    ).add_to(brazil_map_3cluster)
+
+# Display the map
+brazil_map_3cluster
+
+plt.figure(figsize=(20,5))
+sns.scatterplot(
+    data=X_area_clustering,
+    x='total_customer',
+    y='total_seller',
+    hue='cluster_3k',
+    palette='viridis'
+    )
+
+plt.show()
+Berdasarkan pemetaan pada grafik area dan scatterplot 2D, dapat diidentifikasi bahwa:
+
+- **Cluster 0** : area yang jumlah pelanggan dan jumlah penjualnya sedikit (bahkan ada yang kosong). Cluster ini akan dinamakan Cluster Outlying Market.
+
+- **Cluster 2** : area yang jumlah pelanggannya cukup banyak, tetapi jumlah penjualnya sedikit. Cluster ini akan dinamakan Cluster Secondary Market.
+
+- **Cluster 1** : area yang jumlah pelanggan dan jumlah penjualnya banyak. Cluster ini akan dinamakan Cluster Major Market.
+X_area_clustering['cluster3k_name'] = X_area_clustering['cluster_3k'].replace({
+    0: 'Outlying Market',
+    2: 'Secondary Market',
+    1: 'Major Market'
+})
+
+X_area_clustering
+state_cluster = X_area_clustering[['state_name','cluster3k_name']].copy()
+state_cluster.head()
+## **Combining LRFM and Area Cluster**
+
+Pada bagian ini dilakukan pengelompokkan customer berdasarkan LRFM cluster nya dan Area cluster nya. Tujuan dari penggabungan ini adalah untuk menentukan kelompok yang tepat dalam pembuatan sistem rekomendasi kategori produk yang akan digunakan untuk keperluan marketing activity.
+df_customer_cluster = df.groupby(['customer_unique_id','customer_state','product_category_name_english'])[['order_item_id']].sum().reset_index()
+
+df_customer_cluster.head()
+df_customer_cluster = pd.merge(left=df_customer_cluster, right=df_cluster_lrfm, on='customer_unique_id', how='left')
+df_cluster_for_recsys = pd.merge(
+    left=df_customer_cluster,
+    right=state_cluster,
+    left_on='customer_state',
+    right_on='state_name',
+    how='left')
+
+df_cluster_for_recsys = df_cluster_for_recsys.rename(columns={'cluster3k_name':'cluster_area'})
+
+df_cluster_for_recsys.head()
+pivot_cluster = pd.pivot_table(
+    data=df_cluster_for_recsys,
+    index='cluster_lrfm',
+    columns='cluster_area',
+    values='customer_unique_id',
+    aggfunc='nunique',
+    margins=True
+)
+pivot_cluster
+# **Recommendation System**
+
+Pada proyek ini, dilakukan pembuatan recommendation system khususnya untuk pelanggan yang tergolong "Very Low Value Customer" dan "Low Value Customer" pada tiap market nya. Proyek ini difokuskan pada cluster tersebut karena pembuatan personalized activity untuk pelanggan yang tidak aktif dapat membantu meningkatkan peluang untuk mengembalikan mereka ke platform dan membuat mereka lebih aktif kembali. Pelanggan yang tidak aktif cenderung tidak pernah berbelanja atau menggunakan layanan platform dalam jangka waktu tertentu, dan ini dapat menjadi masalah bagi bisnis karena kehilangan potensi pendapatan dari pelanggan tersebut.
+
+Berikut adalah beberapa alasan mengapa personalized recommendation penting untuk pelanggan yang tidak aktif:
+
+1) Relevansi: Dengan personalized recommendation, bisnis dapat menyajikan penawaran yang relevan dan menarik berdasarkan riwayat pembelian dan preferensi sebelumnya dari pelanggan. Dengan demikian, pelanggan yang tidak aktif akan lebih cenderung menemukan rekomendasi yang menarik dan sesuai dengan minat mereka, yang dapat mempengaruhi mereka untuk kembali berbelanja.
+
+2) Pengingat dan Pemberitahuan: Personalized recommendation juga dapat berfungsi sebagai pengingat dan pemberitahuan bagi pelanggan yang tidak aktif tentang produk atau layanan yang mungkin menarik bagi mereka. Dengan menunjukkan kepada mereka penawaran menarik yang mereka lewatkan selama ketidakaktifan mereka, bisnis dapat membangkitkan minat dan keinginan untuk kembali berbelanja.
+
+3) Memperkuat Hubungan: Personalized recommendation dapat membantu memperkuat hubungan antara pelanggan dan platform. Dengan menunjukkan kepada pelanggan bahwa bisnis mengingat preferensi dan kebutuhan mereka, ini dapat meningkatkan rasa percaya dan kenyamanan mereka untuk berinteraksi kembali dengan platform.
+
+4) Meningkatkan Retensi: Dengan memberikan rekomendasi yang disesuaikan dengan minat pelanggan, bisnis dapat meningkatkan tingkat retensi pelanggan yang tidak aktif. Pelanggan akan merasa lebih dihargai dan mungkin cenderung tetap setia dengan platform untuk kebutuhan belanja mereka.
+
+5) Peluang Cross-Selling dan Up-Selling: Personalized recommendation juga dapat membuka peluang untuk melakukan cross-selling (menawarkan produk atau layanan tambahan yang relevan dengan pembelian sebelumnya) dan up-selling (menawarkan produk atau layanan yang lebih premium atau lebih mahal). Ini dapat meningkatkan nilai keranjang belanja dan pendapatan dari pelanggan yang tidak aktif.
+
+6) Kompetitivitas: Dalam lingkungan bisnis yang kompetitif, personalized recommendation dapat menjadi keunggulan kompetitif. Dengan menyediakan pengalaman belanja yang lebih personal dan relevan, platform dapat menarik kembali pelanggan yang beralih ke pesaing.
+
+Dengan menggunakan personalized recommendation secara cerdas dan efektif, platform dapat meningkatkan keterlibatan dan interaksi pelanggan, serta memaksimalkan potensi pendapatan dari pelanggan yang tidak aktif. Hal ini merupakan strategi yang sangat penting dalam menjaga pertumbuhan dan kesuksesan bisnis jangka panjang. 
+
+Pada proyek ini, rekomendasi dibangun dengan memprediksi berapa banyak order yang akan dibuat oleh seorang pelanggan terhadap sebuah kategori produk, berdasarkan historikal data penjualan dan pembelian di tiap kategori produk. Karena model digunakan untuk memprediksi jumlah order yang dibuat pelanggan, maka skala Reader yang diset sebagai valid scale adalah 1-10 order, dimana ketika ada order di atas 10 dianggap tidak valid. Pemilihan batas atas 10 order ini didasarkan dengan standard MOQ di industry retail yaitu 10 order per pengiriman, dengan asumsi apabila ada pelanggan yang melakukan order sangat banyak adalah reseller.
+
+Berdasarkan hal ini, maka dilakukan pembuatan sistem rekomendasi kategori produk pada tiap cluster yaitu:
+
+| **Cluster** | **Description** |
+| ---           | ---           | 
+| **OMVLVC** | Outlying Market - Very Low Value Customer | 
+| **SMVLVC** | Secondary Market - Very Low Value Customer  | 
+| **MMVLVC** | Major Market - Very Low Value Customer  | 
+| **OMLVC** | Outlying Market - Low Value Customer  | 
+| **SMLVC** | Secondary Market - Low Value Customer | 
+| **MMLVC** | Major Market - Low Value Customer  | 
+
+#### ***List of Functions***
+# Creating Dataframe
+def create_dataframe(df, cluster_area, cluster_lrfm):
+    filtered_df = df[(df['cluster_area'] == cluster_area) & (df['cluster_lrfm'] == cluster_lrfm)]
+    new_df = filtered_df.groupby(['customer_unique_id','product_category_name_english'])[['order_item_id']].sum().reset_index()
+    return new_df
+
+# Creating User Matarix
+def create_user_matrix(df, index_col, columns_col, values_col):
+    pivot_table = df.pivot_table(index=index_col, columns=columns_col, values=values_col)
+    return pivot_table
+
+# Creating Surprise Dataset
+def create_surprise_dataset(df, order_col):
+    min_scale = 1
+    max_scale = 10
+    reader = Reader(rating_scale=(min_scale, max_scale))
+    data = Dataset.load_from_df(df=df, reader=reader)
+    return data
+
+## **Cluster Outlying Market - Very Low Value Customer (OMVLVC)**
+### **Load Dataset**
+df_omvlvc = create_dataframe(df_cluster_for_recsys, 'Outlying Market', 'Very Low Value Customer')
+df_omvlvc.head()
+omvlvc_user_matrix = create_user_matrix(df_omvlvc, 'customer_unique_id', 'product_category_name_english', 'order_item_id')
+omvlvc_user_matrix.head()
+### **Dataset Surprise**
+data_omvlvc = create_surprise_dataset(df_omvlvc, 'order_item_id')
+### **Dataset Splitting**
+trainset_omvlvc, testset_omvlvc = train_test_split(data=data_omvlvc, test_size=0.2, random_state=42)
+### **Hyperparameters Tuning**
+
+Pada bagian ini dilakukan pencarian hyperparameter terbaik untuk kedua model recommendation system yang akan dianalisa, hyperparameter tuning yang digunakan untuk tiap cluster adalah sama.
+
+Hyperparameter Singular Value Decomposition (SVD):
+
+1) n_epochs: Hyperparameter ini mengontrol jumlah iterasi atau epoch yang akan digunakan saat melatih model SVD. 
+2) lr_all: Hyperparameter ini adalah learning rate (tingkat pembelajaran) untuk proses pembelajaran model SVD. Learning rate adalah faktor yang menentukan seberapa besar langkah yang akan diambil oleh model saat menyesuaikan bobotnya selama pelatihan. 
+3) reg_all: Hyperparameter ini adalah regularisasi yang digunakan untuk mencegah overfitting dalam model. Regularisasi membantu menghindari model menjadi terlalu kompleks dan mempertahankan umumalisasi yang baik. 
+
+Hyperparameter Alternating Least Squares (ALS):
+
+1) bsl_options: Hyperparameter ini merupakan sub-dictionary yang berisi opsi atau konfigurasi yang berkaitan dengan collaborative filtering menggunakan metode ALS.
+2) method: Hyperparameter ini menentukan metode yang akan digunakan dalam collaborative filtering. Di sini, metode yang digunakan adalah 'als', yang merupakan singkatan dari Alternating Least Squares.
+3) n_epoch: Hyperparameter ini mengontrol jumlah iterasi atau epoch yang akan digunakan saat melatih model ALS. 
+4) reg_u: Hyperparameter ini adalah regularisasi yang diterapkan pada faktor latennya untuk pengguna (user). Regularisasi membantu mencegah overfitting dan mempertahankan umumalisasi yang baik.
+5) reg_i: Hyperparameter ini adalah regularisasi yang diterapkan pada faktor latennya untuk item atau produk. Regularisasi ini membantu menghindari overfitting pada item dan menjaga umumalisasi yang baik. 
+
+# hyperparameter untuk SVD
+hyperparam_svd = {
+    'n_epochs': list(range(5,500,25)),
+    'lr_all': list(np.arange(0.002, 0.011, 0.001)),
+    'reg_all': list(np.arange(0.01, 0.11, 0.01)),
+}
+# hyperparameter untuk ALS
+hyperparam_als = {
+    'bsl_options':{
+        'method':['als'],
+        'n_epoch': list(range(5,500,25)),
+        'reg_u': list(range(0,50,5)),
+        'reg_i': list(range(0,50,5))
+    }
+}
+#### **1. SVD (Singular Value Decomposition)**
+
+Metode rekomendasi sistem (recsys) berbasis Singular Value Decomposition (SVD) adalah salah satu teknik membangun sistem rekomendasi berbasis kolaboratif yang menyediakan rekomendasi kepada pengguna berdasarkan pola perilaku dan preferensi mereka, serta menganalisis data historis tentang interaksi pengguna dengan item atau produk tertentu. Metode rekomendasi SVD dapat memberikan rekomendasi yang akurat dan dipersonalisasi, terutama ketika memiliki data interaksi yang cukup lengkap dan kualitas SVD yang baik. Namun, penting untuk dicatat bahwa SVD memiliki beberapa keterbatasan, seperti menghadapi masalah skala dengan dataset yang sangat besar atau rentan terhadap noise dalam data. SVD bekerja dengan mengurangi dimensi data dan mengekstrak faktor-faktor laten yang mendasari interaksi antara pengguna dan item. SVD menggunakan metode matematis untuk mendekomposisi matriks menjadi tiga matriks.
+gs_svd_omvlvc = GridSearchCV(
+    algo_class= SVD,
+    param_grid= hyperparam_svd,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+# fit to data
+gs_svd_omvlvc.fit(data_omvlvc)
+
+
+gs_svd_omvlvc.best_score
+gs_svd_omvlvc.best_params
+#### **2. ALS (Alternating Least Square)**
+
+Metode rekomendasi sistem (recsys) berbasis Alternating Least Squares (ALS) adalah salah satu teknik membangun sistem rekomendasi berbasis kolaboratif yang digunakan untuk menemukan faktor-faktor laten (latent factors) yang mendasari interaksi antara pengguna dan item dalam data rating, seperti sistem rekomendasi berbasis user-item. ALS adalah metode iteratif yang menggunakan pendekatan bergantian untuk mengestimasi faktor-faktor laten matriks. Metode rekomendasi ALS adalah metode yang populer karena dapat digunakan untuk mengatasi masalah skala dengan dataset yang besar. ALS juga cenderung memberikan hasil yang baik dalam sistem rekomendasi berbasis kolaboratif, terutama ketika data memiliki sparsitas tinggi atau ketika faktor laten yang mendasari interaksi pengguna-item sangat kompleks. 
+gs_als_omvlvc = GridSearchCV(
+    algo_class= BaselineOnly,
+    param_grid= hyperparam_als,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+
+# fit
+gs_als_omvlvc.fit(data_omvlvc)
+gs_als_omvlvc.best_score
+gs_als_omvlvc.best_params
+omvlvc_mae_score = pd.DataFrame(index=['mae','rmse'])
+omvlvc_mae_score['svd_model'] = [gs_svd_omvlvc.best_score['mae'],gs_svd_omvlvc.best_score['rmse']]
+omvlvc_mae_score['als_model'] = [gs_als_omvlvc.best_score['mae'],gs_als_omvlvc.best_score['rmse']]
+omvlvc_mae_score
+Berdasarkan hasil hyperparameter tuning, ditemukan bahwa nilai MAE dan RMSE pada model SVD lebih kecil dibandingkan model ALS. Maka dari itu, dapat disimpulkan bahwa model yang lebih baik digunakan untuk pembuatan recommendation system di cluster Outlying Market - Very Low Value Customer adalah model SVD.
+
+Dapat dilihat juga bahwa RMSE nya tinggi, artinya, model yang dibuat akan lebih tidak baik membuat prediksi rekomendasi pada customer dengan kategori produk yang pembelian jumlahnya banyak.
+### **Predict**
+if gs_svd_omvlvc.best_score['mae'] < gs_als_omvlvc.best_score['mae']:
+    best_model_omvlvc = gs_svd_omvlvc.best_estimator['mae']
+else:
+    best_model_omvlvc = gs_als_omvlvc.best_estimator['mae']
+best_model_omvlvc.fit(trainset_omvlvc)
+list_customer = df_omvlvc['customer_unique_id'].drop_duplicates().to_list()
+list_product = df_omvlvc['product_category_name_english'].drop_duplicates().to_list()
+list_omvlvc = []
+
+for user in list_customer:
+    for item in list_product:
+        result = [user, item]
+        list_omvlvc.append(result)
+
+df_result_omvlvc = pd.DataFrame(
+    data= list_omvlvc,
+    columns=['customer_unique_id', 'product_category_name_english']
+    )
+df_result_omvlvc.head()
+list_est_order = []
+
+for row in df_result_omvlvc.iterrows():
+    user = row[1]['customer_unique_id']
+    item = row[1]['product_category_name_english']
+
+    # predict 1 row
+    est_order = best_model_omvlvc.predict(uid=user, iid=item)
+    list_est_order.append(est_order[3])
+df_result_omvlvc['est_order'] = list_est_order
+df_result_omvlvc
+df_result_omvlvc['est_order'].describe()
+df_actual_vs_result_omvlvc = pd.merge(
+    left= df_result_omvlvc,
+    right= df_omvlvc,
+    on = ['customer_unique_id','product_category_name_english'],
+    how = 'left'
+).rename(columns={'order_item_id':'act_order'})
+df_actual_vs_result_omvlvc.head()
+df_predict_omvlvc = df_actual_vs_result_omvlvc[df_actual_vs_result_omvlvc['act_order'].isna()].drop(columns='act_order')
+df_predict_omvlvc.head()
+df_predict_omvlvc['cat_rank'] = df_predict_omvlvc.groupby('customer_unique_id')['est_order'].rank(ascending=False, method='dense')
+df_predict_omvlvc.head()
+df_top_recom = df_predict_omvlvc[df_predict_omvlvc['cat_rank'].isin([1,2,3])].sort_values(by=['customer_unique_id','cat_rank'])
+df_top_recom.head()
+df_top_recom['cat_rank'].value_counts()
+# Custom aggregation function to join unique product categories using a set
+def join_unique_categories(categories):
+    return ', '.join(set(categories))
+
+# Group by 'customer_unique_id' and aggregate the unique product categories as a sentence
+df_omvlvc_original_cat = df_omvlvc.groupby('customer_unique_id')['product_category_name_english'].agg(join_unique_categories).reset_index()
+
+# Rename the column to 'cat_original'
+df_omvlvc_original_cat = df_omvlvc_original_cat.rename(columns={'product_category_name_english': 'cat_original'})
+
+df_omvlvc_original_cat.head()
+df_omvlvc_buyer_cat = pd.merge(left=df_top_recom, right=df_omvlvc_original_cat, on='customer_unique_id', how='left')
+df_omvlvc_buyer_cat.head()
+df_omvlvc_cat_group = df_omvlvc_buyer_cat.groupby(['cat_original','product_category_name_english'])[['est_order']].sum().reset_index()
+df_omvlvc_cat_group['cat_rank'] = df_omvlvc_cat_group.groupby(['cat_original'])['est_order'].rank(ascending=False, method='dense')
+df_omvlvc_cat_group.head()
+df_omvlvc_cat_group_top_rank = df_omvlvc_cat_group[df_omvlvc_cat_group['cat_rank'].isin([1,2,3])].sort_values(by=['cat_original','cat_rank']).reset_index(drop=True)
+df_omvlvc_cat_group_top_rank.head()
+pivot_cat_omvlvc = pd.pivot_table(
+    data=df_omvlvc_cat_group_top_rank,
+    columns='cat_original',
+    index='product_category_name_english',
+    values='est_order',
+    aggfunc=np.sum,
+)
+
+pivot_cat_omvlvc
+omvlvc_cat_recs = []
+omvlvc_cat_ori = []
+
+for col in pivot_cat_omvlvc.columns:
+    non_na_indexes = pivot_cat_omvlvc[col].index[pivot_cat_omvlvc[col].notna()]
+    joined_indexes = ', '.join(non_na_indexes)
+    omvlvc_cat_ori.append(col)
+    omvlvc_cat_recs.append(joined_indexes)
+df_omvlvc_recommendation = pd.DataFrame()
+df_omvlvc_recommendation['cat_original'] = omvlvc_cat_ori
+df_omvlvc_recommendation['cat_recommendation'] = omvlvc_cat_recs
+df_omvlvc_recommendation.head()
+df_omvlvc_recommendation
+    Berdasarkan hasil model recsys yang sudah dibuat, dapat diperoleh sebuah tabel rekomendasi yang dapat digunakan untuk merekomendasikan kategori produk yang dapat ditawarkan ke pelanggan berdasarkan kategori produk yang pernah dibeli oleh pelanggan tersebut. Sebagai contoh, untuk customer yang pernah membeli produk air_conditioning, dapat kita rekomendasikan produk construction_tools_construction, fixed_telephony, garden_tools.
+sns.countplot(
+    data=df_omvlvc_recommendation, 
+    y='cat_recommendation', 
+    order=df_omvlvc_recommendation['cat_recommendation'].value_counts().sort_values(ascending=False).index)
+plt.title('Category Recommendation for Cluster OMVLVC')
+plt.show()
+    Berdasarkan hasil model rekomendasi, dapat disimpulkan bahwa pelanggan yang berada pada Cluster OMVLVC mayoritas dapat kita rekomendasikan produk construction_tools_construction, fixed_telephony, musical_instruments.
+## **Cluster Secondary Market - Very Low Value Customer (SMVLVC)**
+### **Load Dataset**
+df_smvlvc = create_dataframe(df_cluster_for_recsys, 'Secondary Market', 'Very Low Value Customer')
+df_smvlvc.head()
+smvlvc_user_matrix = create_user_matrix(df_smvlvc, 'customer_unique_id', 'product_category_name_english', 'order_item_id')
+smvlvc_user_matrix.head()
+### **Dataset Surprise**
+data_smvlvc = create_surprise_dataset(df_smvlvc, 'order_item_id')
+### **Dataset Splitting**
+trainset_smvlvc, testset_smvlvc = train_test_split(data=data_smvlvc, test_size=0.2, random_state=42)
+### **Hyperparam Tuning**
+#### **1. SVD (Singular Value Decomposition)**
+gs_svd_smvlvc = GridSearchCV(
+    algo_class= SVD,
+    param_grid= hyperparam_svd,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+# fit to data
+gs_svd_smvlvc.fit(data_smvlvc)
+gs_svd_smvlvc.best_score
+gs_svd_smvlvc.best_params
+#### **2. ALS (Alternating Least Square)**
+gs_als_smvlvc = GridSearchCV(
+    algo_class= BaselineOnly,
+    param_grid= hyperparam_als,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+
+# fit
+gs_als_smvlvc.fit(data_smvlvc)
+gs_als_smvlvc.best_score
+gs_als_smvlvc.best_params
+smvlvc_mae_score = pd.DataFrame(index=['mae','rmse'])
+smvlvc_mae_score['svd_model'] = [gs_svd_smvlvc.best_score['mae'],gs_svd_smvlvc.best_score['rmse']]
+smvlvc_mae_score['als_model'] = [gs_als_smvlvc.best_score['mae'],gs_als_smvlvc.best_score['rmse']]
+smvlvc_mae_score
+Berdasarkan hasil hyperparameter tuning, ditemukan bahwa nilai MAE dan RMSE pada model SVD lebih kecil dibandingkan model ALS. Maka dari itu, dapat disimpulkan bahwa model yang lebih baik digunakan untuk pembuatan recommendation system di cluster Secondary Market - Very Low Value Customer adalah model SVD.
+
+Dapat dilihat juga bahwa RMSE nya tinggi, artinya, model yang dibuat akan lebih tidak baik membuat prediksi rekomendasi pada customer dengan kategori produk yang pembelian jumlahnya banyak.
+### **Predict**
+if gs_svd_smvlvc.best_score['mae'] < gs_als_smvlvc.best_score['mae']:
+    best_model_smvlvc = gs_svd_smvlvc.best_estimator['mae']
+else:
+    best_model_smvlvc = gs_als_smvlvc.best_estimator['mae']
+best_model_smvlvc.fit(trainset_smvlvc)
+list_customer = df_smvlvc['customer_unique_id'].drop_duplicates().to_list()
+list_product = df_smvlvc['product_category_name_english'].drop_duplicates().to_list()
+list_smvlvc = []
+
+for user in list_customer:
+    for item in list_product:
+        result = [user, item]
+        list_smvlvc.append(result)
+
+df_result_smvlvc = pd.DataFrame(
+    data= list_smvlvc,
+    columns=['customer_unique_id', 'product_category_name_english']
+    )
+df_result_smvlvc.head()
+list_est_order = []
+
+for row in df_result_smvlvc.iterrows():
+    user = row[1]['customer_unique_id']
+    item = row[1]['product_category_name_english']
+
+    # predict 1 row
+    est_order = best_model_smvlvc.predict(uid=user, iid=item)
+    list_est_order.append(est_order[3])
+df_result_smvlvc['est_order'] = list_est_order
+df_result_smvlvc
+df_actual_vs_result_smvlvc = pd.merge(
+    left= df_result_smvlvc,
+    right= df_smvlvc,
+    on = ['customer_unique_id','product_category_name_english'],
+    how = 'left'
+).rename(columns={'order_item_id':'act_order'})
+df_actual_vs_result_smvlvc.head()
+df_predict_smvlvc = df_actual_vs_result_smvlvc[df_actual_vs_result_smvlvc['act_order'].isna()].drop(columns='act_order')
+df_predict_smvlvc.head()
+df_predict_smvlvc['cat_rank'] = df_predict_smvlvc.groupby('customer_unique_id')['est_order'].rank(ascending=False, method='dense')
+df_predict_smvlvc.head()
+df_top_recom = df_predict_smvlvc[df_predict_smvlvc['cat_rank'].isin([1,2,3])].sort_values(by=['customer_unique_id','cat_rank'])
+df_top_recom.head()
+df_top_recom['cat_rank'].value_counts()
+# Custom aggregation function to join unique product categories using a set
+def join_unique_categories(categories):
+    return ', '.join(set(categories))
+
+# Group by 'customer_unique_id' and aggregate the unique product categories as a sentence
+df_smvlvc_original_cat = df_smvlvc.groupby('customer_unique_id')['product_category_name_english'].agg(join_unique_categories).reset_index()
+
+# Rename the column to 'cat_original'
+df_smvlvc_original_cat = df_smvlvc_original_cat.rename(columns={'product_category_name_english': 'cat_original'})
+
+df_smvlvc_original_cat.head()
+df_smvlvc_buyer_cat = pd.merge(left=df_top_recom, right=df_smvlvc_original_cat, on='customer_unique_id', how='left')
+df_smvlvc_buyer_cat.head()
+df_smvlvc_cat_group = df_smvlvc_buyer_cat.groupby(['cat_original','product_category_name_english'])[['est_order']].sum().reset_index()
+df_smvlvc_cat_group['cat_rank'] = df_smvlvc_cat_group.groupby(['cat_original'])['est_order'].rank(ascending=False, method='dense')
+df_smvlvc_cat_group.head()
+df_smvlvc_cat_group_top_rank = df_smvlvc_cat_group[df_smvlvc_cat_group['cat_rank'].isin([1,2,3])].sort_values(by=['cat_original','cat_rank']).reset_index(drop=True)
+df_smvlvc_cat_group_top_rank.head()
+pivot_cat_smvlvc = pd.pivot_table(
+    data=df_smvlvc_cat_group_top_rank,
+    columns='cat_original',
+    index='product_category_name_english',
+    values='est_order',
+    aggfunc=np.sum,
+)
+
+pivot_cat_smvlvc
+smvlvc_cat_recs = []
+smvlvc_cat_ori = []
+
+for col in pivot_cat_smvlvc.columns:
+    non_na_indexes = pivot_cat_smvlvc[col].index[pivot_cat_smvlvc[col].notna()]
+    joined_indexes = ', '.join(non_na_indexes)
+    smvlvc_cat_ori.append(col)
+    smvlvc_cat_recs.append(joined_indexes)
+df_smvlvc_recommendation = pd.DataFrame()
+df_smvlvc_recommendation['cat_original'] = smvlvc_cat_ori
+df_smvlvc_recommendation['cat_recommendation'] = smvlvc_cat_recs
+df_smvlvc_recommendation.head()
+    Berdasarkan hasil model recsys yang sudah dibuat, dapat diperoleh sebuah tabel rekomendasi yang dapat digunakan untuk merekomendasikan kategori produk yang dapat ditawarkan ke pelanggan berdasarkan kategori produk yang pernah dibeli oleh pelanggan tersebut. Sebagai contoh, untuk customer yang pernah membeli produk air_conditioning, dapat kita rekomendasikan produk christmas_supplies, construction_tools_construction, dan home_construction.
+plt.figure(figsize=(20,15))
+sns.countplot(
+    data=df_smvlvc_recommendation, 
+    y='cat_recommendation', 
+    order=df_smvlvc_recommendation['cat_recommendation'].value_counts().sort_values(ascending=False).index)
+plt.title('Category Recommendation for Cluster SMVLVC')
+plt.show()
+    Berdasarkan hasil model rekomendasi, dapat disimpulkan bahwa pelanggan yang berada pada Cluster SMVLVC mayoritas dapat kita rekomendasikan produk christmas_supplies, construction_tools_construction, home_construction.
+## **Cluster Major Market - Very Low Value Customer (MMVLVC)**
+### **Load Dataset**
+df_mmvlvc = create_dataframe(df_cluster_for_recsys, 'Major Market', 'Very Low Value Customer')
+df_mmvlvc.head()
+mmvlvc_user_matrix = create_user_matrix(df_mmvlvc, 'customer_unique_id', 'product_category_name_english', 'order_item_id')
+mmvlvc_user_matrix.head()
+### **Dataset Surprise**
+data_mmvlvc = create_surprise_dataset(df_mmvlvc, 'order_item_id')
+### **Dataset Splitting**
+trainset_mmvlvc, testset_mmvlvc = train_test_split(data=data_mmvlvc, test_size=0.2, random_state=42)
+### **Hyperparam Tuning**
+#### **1. SVD (Singular Value Decomposition)**
+gs_svd_mmvlvc = GridSearchCV(
+    algo_class= SVD,
+    param_grid= hyperparam_svd,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+# fit to data
+gs_svd_mmvlvc.fit(data_mmvlvc)
+gs_svd_mmvlvc.best_score
+gs_svd_mmvlvc.best_params
+#### **2. ALS (Alternating Least Square)**
+gs_als_mmvlvc = GridSearchCV(
+    algo_class= BaselineOnly,
+    param_grid= hyperparam_als,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+
+# fit
+gs_als_mmvlvc.fit(data_mmvlvc)
+gs_als_mmvlvc.best_score
+gs_als_mmvlvc.best_params
+mmvlvc_mae_score = pd.DataFrame(index=['mae','rmse'])
+mmvlvc_mae_score['svd_model'] = [gs_svd_mmvlvc.best_score['mae'],gs_svd_mmvlvc.best_score['rmse']]
+mmvlvc_mae_score['als_model'] = [gs_als_mmvlvc.best_score['mae'],gs_als_mmvlvc.best_score['rmse']]
+mmvlvc_mae_score
+Berdasarkan hasil hyperparameter tuning, ditemukan bahwa nilai MAE dan RMSE pada model SVD lebih kecil dibandingkan model ALS. Maka dari itu, dapat disimpulkan bahwa model yang lebih baik digunakan untuk pembuatan recommendation system di cluster Major Market - Very Low Value Customer adalah model SVD.
+
+Dapat dilihat juga bahwa RMSE nya tinggi, artinya, model yang dibuat akan lebih tidak baik membuat prediksi rekomendasi pada customer dengan kategori produk yang pembelian jumlahnya banyak.
+### **Predict**
+if gs_svd_mmvlvc.best_score['mae'] < gs_als_mmvlvc.best_score['mae']:
+    best_model_mmvlvc = gs_svd_mmvlvc.best_estimator['mae']
+else:
+    best_model_mmvlvc = gs_als_mmvlvc.best_estimator['mae']
+best_model_mmvlvc.fit(trainset_mmvlvc)
+list_customer = df_mmvlvc['customer_unique_id'].drop_duplicates().to_list()
+list_product = df_mmvlvc['product_category_name_english'].drop_duplicates().to_list()
+list_mmvlvc = []
+
+for user in list_customer:
+    for item in list_product:
+        result = [user, item]
+        list_mmvlvc.append(result)
+
+df_result_mmvlvc = pd.DataFrame(
+    data= list_mmvlvc,
+    columns=['customer_unique_id', 'product_category_name_english']
+    )
+df_result_mmvlvc.head()
+list_est_order = []
+
+for row in df_result_mmvlvc.iterrows():
+    user = row[1]['customer_unique_id']
+    item = row[1]['product_category_name_english']
+
+    # predict 1 row
+    est_order = best_model_mmvlvc.predict(uid=user, iid=item)
+    list_est_order.append(est_order[3])
+df_result_mmvlvc['est_order'] = list_est_order
+df_result_mmvlvc
+df_actual_vs_result_mmvlvc = pd.merge(
+    left= df_result_mmvlvc,
+    right= df_mmvlvc,
+    on = ['customer_unique_id','product_category_name_english'],
+    how = 'left'
+).rename(columns={'order_item_id':'act_order'})
+df_actual_vs_result_mmvlvc.head()
+df_predict_mmvlvc = df_actual_vs_result_mmvlvc[df_actual_vs_result_mmvlvc['act_order'].isna()].drop(columns='act_order')
+df_predict_mmvlvc.head()
+df_predict_mmvlvc['cat_rank'] = df_predict_mmvlvc.groupby('customer_unique_id')['est_order'].rank(ascending=False, method='dense')
+df_predict_mmvlvc.head()
+df_top_recom = df_predict_mmvlvc[df_predict_mmvlvc['cat_rank'].isin([1,2,3])].sort_values(by=['customer_unique_id','cat_rank'])
+df_top_recom.head()
+df_top_recom['cat_rank'].value_counts()
+# Custom aggregation function to join unique product categories using a set
+def join_unique_categories(categories):
+    return ', '.join(set(categories))
+
+# Group by 'customer_unique_id' and aggregate the unique product categories as a sentence
+df_mmvlvc_original_cat = df_mmvlvc.groupby('customer_unique_id')['product_category_name_english'].agg(join_unique_categories).reset_index()
+
+# Rename the column to 'cat_original'
+df_mmvlvc_original_cat = df_mmvlvc_original_cat.rename(columns={'product_category_name_english': 'cat_original'})
+
+df_mmvlvc_original_cat.head()
+df_mmvlvc_buyer_cat = pd.merge(left=df_top_recom, right=df_mmvlvc_original_cat, on='customer_unique_id', how='left')
+df_mmvlvc_buyer_cat.head()
+df_mmvlvc_cat_group = df_mmvlvc_buyer_cat.groupby(['cat_original','product_category_name_english'])[['est_order']].sum().reset_index()
+df_mmvlvc_cat_group['cat_rank'] = df_mmvlvc_cat_group.groupby(['cat_original'])['est_order'].rank(ascending=False, method='dense')
+df_mmvlvc_cat_group.head()
+df_mmvlvc_cat_group_top_rank = df_mmvlvc_cat_group[df_mmvlvc_cat_group['cat_rank'].isin([1,2,3])].sort_values(by=['cat_original','cat_rank']).reset_index(drop=True)
+df_mmvlvc_cat_group_top_rank.head()
+pivot_cat_mmvlvc = pd.pivot_table(
+    data=df_mmvlvc_cat_group_top_rank,
+    columns='cat_original',
+    index='product_category_name_english',
+    values='est_order',
+    aggfunc=np.sum,
+)
+
+pivot_cat_mmvlvc
+mmvlvc_cat_recs = []
+mmvlvc_cat_ori = []
+
+for col in pivot_cat_mmvlvc.columns:
+    non_na_indexes = pivot_cat_mmvlvc[col].index[pivot_cat_mmvlvc[col].notna()]
+    joined_indexes = ', '.join(non_na_indexes)
+    mmvlvc_cat_ori.append(col)
+    mmvlvc_cat_recs.append(joined_indexes)
+df_mmvlvc_recommendation = pd.DataFrame()
+df_mmvlvc_recommendation['cat_original'] = mmvlvc_cat_ori
+df_mmvlvc_recommendation['cat_recommendation'] = mmvlvc_cat_recs
+df_mmvlvc_recommendation.head()
+    Berdasarkan hasil model recsys yang sudah dibuat, dapat diperoleh sebuah tabel rekomendasi yang dapat digunakan untuk merekomendasikan kategori produk yang dapat ditawarkan ke pelanggan berdasarkan kategori produk yang pernah dibeli oleh pelanggan tersebut. Sebagai contoh, untuk customer yang pernah membeli produk air_conditioning, dapat kita rekomendasikan produk agro_industry_and_commerce, furniture_living_room, dan home_appliances_2.
+plt.figure(figsize=(20,15))
+sns.countplot(
+    data=df_mmvlvc_recommendation, 
+    y='cat_recommendation', 
+    order=df_mmvlvc_recommendation['cat_recommendation'].value_counts().sort_values(ascending=False).index)
+plt.show()
+    Berdasarkan hasil model rekomendasi, dapat disimpulkan bahwa pelanggan yang berada pada Cluster MMVLVC mayoritas dapat kita rekomendasikan produk agro_industry_and_commerce, furniture_living_room, dan home_appliances_2.
+## **Cluster Outlying Market - Low Value Customer (OMLVC)**
+### **Load Dataset**
+df_omlvc = create_dataframe(df_cluster_for_recsys, 'Outlying Market', 'Low Value Customer')
+df_omlvc.head()
+omlvc_user_matrix = create_user_matrix(df_omlvc, 'customer_unique_id', 'product_category_name_english', 'order_item_id')
+omlvc_user_matrix.head()
+### **Dataset Surprise**
+data_omlvc = create_surprise_dataset(df_omlvc, 'order_item_id')
+### **Dataset Splitting**
+trainset_omlvc, testset_omlvc = train_test_split(data=data_omlvc, test_size=0.2, random_state=42)
+### **Hyperparam Tuning**
+#### **1. SVD (Singular Value Decomposition)**
+gs_svd_omlvc = GridSearchCV(
+    algo_class= SVD,
+    param_grid= hyperparam_svd,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+# fit to data
+gs_svd_omlvc.fit(data_omlvc)
+gs_svd_omlvc.best_score
+gs_svd_omlvc.best_params
+#### **2. ALS (Alternating Least Square)**
+gs_als_omlvc = GridSearchCV(
+    algo_class= BaselineOnly,
+    param_grid= hyperparam_als,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+
+# fit
+gs_als_omlvc.fit(data_omlvc)
+gs_als_omlvc.best_score
+gs_als_omlvc.best_params
+omlvc_mae_score = pd.DataFrame(index=['mae','rmse'])
+omlvc_mae_score['svd_model'] = [gs_svd_omlvc.best_score['mae'],gs_svd_omlvc.best_score['rmse']]
+omlvc_mae_score['als_model'] = [gs_als_omlvc.best_score['mae'],gs_als_omlvc.best_score['rmse']]
+omlvc_mae_score
+Berdasarkan hasil hyperparameter tuning, ditemukan bahwa nilai MAE dan RMSE pada model SVD lebih kecil dibandingkan model ALS. Maka dari itu, dapat disimpulkan bahwa model yang lebih baik digunakan untuk pembuatan recommendation system di cluster Outlying Market - Low Value Customer adalah model SVD.
+
+Dapat dilihat juga bahwa RMSE nya tinggi, artinya, model yang dibuat akan lebih tidak baik membuat prediksi rekomendasi pada customer dengan kategori produk yang pembelian jumlahnya banyak.
+### **Predict**
+if gs_svd_omlvc.best_score['mae'] < gs_als_omlvc.best_score['mae']:
+    best_model_omlvc = gs_svd_omlvc.best_estimator['mae']
+else:
+    best_model_omlvc = gs_als_omlvc.best_estimator['mae']
+best_model_omlvc.fit(trainset_omlvc)
+list_customer = df_omlvc['customer_unique_id'].drop_duplicates().to_list()
+list_product = df_omlvc['product_category_name_english'].drop_duplicates().to_list()
+list_omlvc = []
+
+for user in list_customer:
+    for item in list_product:
+        result = [user, item]
+        list_omlvc.append(result)
+
+df_result_omlvc = pd.DataFrame(
+    data= list_omlvc,
+    columns=['customer_unique_id', 'product_category_name_english']
+    )
+df_result_omlvc.head()
+list_est_order = []
+
+for row in df_result_omlvc.iterrows():
+    user = row[1]['customer_unique_id']
+    item = row[1]['product_category_name_english']
+
+    # predict 1 row
+    est_order = best_model_omlvc.predict(uid=user, iid=item)
+    list_est_order.append(est_order[3])
+df_result_omlvc['est_order'] = list_est_order
+df_result_omlvc
+df_actual_vs_result_omlvc = pd.merge(
+    left= df_result_omlvc,
+    right= df_omlvc,
+    on = ['customer_unique_id','product_category_name_english'],
+    how = 'left'
+).rename(columns={'order_item_id':'act_order'})
+df_actual_vs_result_omlvc.head()
+df_predict_omlvc = df_actual_vs_result_omlvc[df_actual_vs_result_omlvc['act_order'].isna()].drop(columns='act_order')
+df_predict_omlvc.head()
+df_predict_omlvc['cat_rank'] = df_predict_omlvc.groupby('customer_unique_id')['est_order'].rank(ascending=False, method='dense')
+df_predict_omlvc.head()
+df_top_recom = df_predict_omlvc[df_predict_omlvc['cat_rank'].isin([1,2,3])].sort_values(by=['customer_unique_id','cat_rank'])
+df_top_recom.head()
+df_top_recom['cat_rank'].value_counts()
+# Custom aggregation function to join unique product categories using a set
+def join_unique_categories(categories):
+    return ', '.join(set(categories))
+
+# Group by 'customer_unique_id' and aggregate the unique product categories as a sentence
+df_omlvc_original_cat = df_omlvc.groupby('customer_unique_id')['product_category_name_english'].agg(join_unique_categories).reset_index()
+
+# Rename the column to 'cat_original'
+df_omlvc_original_cat = df_omlvc_original_cat.rename(columns={'product_category_name_english': 'cat_original'})
+
+df_omlvc_original_cat.head()
+df_omlvc_buyer_cat = pd.merge(left=df_top_recom, right=df_omlvc_original_cat, on='customer_unique_id', how='left')
+df_omlvc_buyer_cat.head()
+df_omlvc_cat_group = df_omlvc_buyer_cat.groupby(['cat_original','product_category_name_english'])[['est_order']].sum().reset_index()
+df_omlvc_cat_group['cat_rank'] = df_omlvc_cat_group.groupby(['cat_original'])['est_order'].rank(ascending=False, method='dense')
+df_omlvc_cat_group.head()
+df_omlvc_cat_group_top_rank = df_omlvc_cat_group[df_omlvc_cat_group['cat_rank'].isin([1,2,3])].sort_values(by=['cat_original','cat_rank']).reset_index(drop=True)
+df_omlvc_cat_group_top_rank.head()
+pivot_cat_omlvc = pd.pivot_table(
+    data=df_omlvc_cat_group_top_rank,
+    columns='cat_original',
+    index='product_category_name_english',
+    values='est_order',
+    aggfunc=np.sum,
+)
+
+pivot_cat_omlvc
+omlvc_cat_recs = []
+omlvc_cat_ori = []
+
+for col in pivot_cat_omlvc.columns:
+    non_na_indexes = pivot_cat_omlvc[col].index[pivot_cat_omlvc[col].notna()]
+    joined_indexes = ', '.join(non_na_indexes)
+    omlvc_cat_ori.append(col)
+    omlvc_cat_recs.append(joined_indexes)
+df_omlvc_recommendation = pd.DataFrame()
+df_omlvc_recommendation['cat_original'] = omlvc_cat_ori
+df_omlvc_recommendation['cat_recommendation'] = omlvc_cat_recs
+df_omlvc_recommendation.head()
+    Berdasarkan hasil model recsys yang sudah dibuat, dapat diperoleh sebuah tabel rekomendasi yang dapat digunakan untuk merekomendasikan kategori produk yang dapat ditawarkan ke pelanggan berdasarkan kategori produk yang pernah dibeli oleh pelanggan tersebut. Sebagai contoh, untuk customer yang pernah membeli produk air_conditioning, dapat kita rekomendasikan produk agro_industry_and_commerce, fashion_male_clothing, dan fashion_sport.
+plt.figure(figsize=(20,15))
+sns.countplot(
+    data=df_omlvc_recommendation, 
+    y='cat_recommendation', 
+    order=df_omlvc_recommendation['cat_recommendation'].value_counts().sort_values(ascending=False).index)
+plt.show()
+    Berdasarkan hasil model rekomendasi, dapat disimpulkan bahwa pelanggan yang berada pada Cluster OMLVC mayoritas dapat kita rekomendasikan produk agro_industry_and_commerce, fashion_male_clothing, dan fashion_sport.
+## **Cluster Secondary Market - Low Value Customer (SMLVC)**
+### **Load Dataset**
+df_smlvc = create_dataframe(df_cluster_for_recsys, 'Secondary Market', 'Low Value Customer')
+df_smlvc.head()
+smlvc_user_matrix = create_user_matrix(df_smlvc, 'customer_unique_id', 'product_category_name_english', 'order_item_id')
+smlvc_user_matrix.head()
+### **Dataset Surprise**
+data_smlvc = create_surprise_dataset(df_smlvc, 'order_item_id')
+### **Dataset Splitting**
+trainset_smlvc, testset_smlvc = train_test_split(data=data_smlvc, test_size=0.2, random_state=42)
+### **Hyperparam Tuning**
+#### **1. SVD (Singular Value Decomposition)**
+gs_svd_smlvc = GridSearchCV(
+    algo_class= SVD,
+    param_grid= hyperparam_svd,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+# fit to data
+gs_svd_smlvc.fit(data_smlvc)
+gs_svd_smlvc.best_score
+gs_svd_smlvc.best_params
+#### **2. ALS (Alternating Least Square)**
+gs_als_smlvc = GridSearchCV(
+    algo_class= BaselineOnly,
+    param_grid= hyperparam_als,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+
+# fit
+gs_als_smlvc.fit(data_smlvc)
+gs_als_smlvc.best_score
+gs_als_smlvc.best_params
+smlvc_mae_score = pd.DataFrame(index=['mae','rmse'])
+smlvc_mae_score['svd_model'] = [gs_svd_smlvc.best_score['mae'],gs_svd_smlvc.best_score['rmse']]
+smlvc_mae_score['als_model'] = [gs_als_smlvc.best_score['mae'],gs_als_smlvc.best_score['rmse']]
+smlvc_mae_score
+Berdasarkan hasil hyperparameter tuning, ditemukan bahwa nilai MAE dan RMSE pada model SVD lebih kecil dibandingkan model ALS. Maka dari itu, dapat disimpulkan bahwa model yang lebih baik digunakan untuk pembuatan recommendation system di cluster Secondary Market - Low Value Customer adalah model SVD.
+
+Dapat dilihat juga bahwa RMSE nya tinggi, artinya, model yang dibuat akan lebih tidak baik membuat prediksi rekomendasi pada customer dengan kategori produk yang pembelian jumlahnya banyak.
+### **Predict**
+if gs_svd_smlvc.best_score['mae'] < gs_als_smlvc.best_score['mae']:
+    best_model_smlvc = gs_svd_smlvc.best_estimator['mae']
+else:
+    best_model_smlvc = gs_als_smlvc.best_estimator['mae']
+best_model_smlvc.fit(trainset_smlvc)
+list_customer = df_smlvc['customer_unique_id'].drop_duplicates().to_list()
+list_product = df_smlvc['product_category_name_english'].drop_duplicates().to_list()
+list_smlvc = []
+
+for user in list_customer:
+    for item in list_product:
+        result = [user, item]
+        list_smlvc.append(result)
+
+df_result_smlvc = pd.DataFrame(
+    data= list_smlvc,
+    columns=['customer_unique_id', 'product_category_name_english']
+    )
+df_result_smlvc.head()
+list_est_order = []
+
+for row in df_result_smlvc.iterrows():
+    user = row[1]['customer_unique_id']
+    item = row[1]['product_category_name_english']
+
+    # predict 1 row
+    est_order = best_model_smlvc.predict(uid=user, iid=item)
+    list_est_order.append(est_order[3])
+df_result_smlvc['est_order'] = list_est_order
+df_result_smlvc
+df_actual_vs_result_smlvc = pd.merge(
+    left= df_result_smlvc,
+    right= df_smlvc,
+    on = ['customer_unique_id','product_category_name_english'],
+    how = 'left'
+).rename(columns={'order_item_id':'act_order'})
+df_actual_vs_result_smlvc.head()
+df_predict_smlvc = df_actual_vs_result_smlvc[df_actual_vs_result_smlvc['act_order'].isna()].drop(columns='act_order')
+df_predict_smlvc.head()
+df_predict_smlvc['cat_rank'] = df_predict_smlvc.groupby('customer_unique_id')['est_order'].rank(ascending=False, method='dense')
+df_predict_smlvc.head()
+df_top_recom = df_predict_smlvc[df_predict_smlvc['cat_rank'].isin([1,2,3])].sort_values(by=['customer_unique_id','cat_rank'])
+df_top_recom.head()
+df_top_recom['cat_rank'].value_counts()
+# Custom aggregation function to join unique product categories using a set
+def join_unique_categories(categories):
+    return ', '.join(set(categories))
+
+# Group by 'customer_unique_id' and aggregate the unique product categories as a sentence
+df_smlvc_original_cat = df_smlvc.groupby('customer_unique_id')['product_category_name_english'].agg(join_unique_categories).reset_index()
+
+# Rename the column to 'cat_original'
+df_smlvc_original_cat = df_smlvc_original_cat.rename(columns={'product_category_name_english': 'cat_original'})
+
+df_smlvc_original_cat.head()
+df_smlvc_buyer_cat = pd.merge(left=df_top_recom, right=df_smlvc_original_cat, on='customer_unique_id', how='left')
+df_smlvc_buyer_cat.head()
+df_smlvc_cat_group = df_smlvc_buyer_cat.groupby(['cat_original','product_category_name_english'])[['est_order']].sum().reset_index()
+df_smlvc_cat_group['cat_rank'] = df_smlvc_cat_group.groupby(['cat_original'])['est_order'].rank(ascending=False, method='dense')
+df_smlvc_cat_group.head()
+df_smlvc_cat_group_top_rank = df_smlvc_cat_group[df_smlvc_cat_group['cat_rank'].isin([1,2,3])].sort_values(by=['cat_original','cat_rank']).reset_index(drop=True)
+df_smlvc_cat_group_top_rank.head()
+pivot_cat_smlvc = pd.pivot_table(
+    data=df_smlvc_cat_group_top_rank,
+    columns='cat_original',
+    index='product_category_name_english',
+    values='est_order',
+    aggfunc=np.sum,
+)
+
+pivot_cat_smlvc
+smlvc_cat_recs = []
+smlvc_cat_ori = []
+
+for col in pivot_cat_smlvc.columns:
+    non_na_indexes = pivot_cat_smlvc[col].index[pivot_cat_smlvc[col].notna()]
+    joined_indexes = ', '.join(non_na_indexes)
+    smlvc_cat_ori.append(col)
+    smlvc_cat_recs.append(joined_indexes)
+df_smlvc_recommendation = pd.DataFrame()
+df_smlvc_recommendation['cat_original'] = smlvc_cat_ori
+df_smlvc_recommendation['cat_recommendation'] = smlvc_cat_recs
+df_smlvc_recommendation.head()
+    Berdasarkan hasil model recsys yang sudah dibuat, dapat diperoleh sebuah tabel rekomendasi yang dapat digunakan untuk merekomendasikan kategori produk yang dapat ditawarkan ke pelanggan berdasarkan kategori produk yang pernah dibeli oleh pelanggan tersebut. Sebagai contoh, untuk customer yang pernah membeli produk costruction_tools_garden, fixed_telephony, dan food_drink.
+plt.figure(figsize=(20,15))
+sns.countplot(
+    data=df_smlvc_recommendation, 
+    y='cat_recommendation', 
+    order=df_smlvc_recommendation['cat_recommendation'].value_counts().sort_values(ascending=False).index)
+plt.show()
+    Berdasarkan hasil model rekomendasi, dapat disimpulkan bahwa pelanggan yang berada pada Cluster SMLVC mayoritas dapat kita rekomendasikan produk costruction_tools_garden, fixed_telephony, dan food_drink.
+## **Cluster Major Market - Low Value Customer (MMLVC)**
+### **Load Dataset**
+df_mmlvc = create_dataframe(df_cluster_for_recsys, 'Major Market', 'Low Value Customer')
+df_mmlvc.head()
+mmlvc_user_matrix = create_user_matrix(df_mmlvc, 'customer_unique_id', 'product_category_name_english', 'order_item_id')
+mmlvc_user_matrix.head()
+### **Dataset Surprise**
+data_mmlvc = create_surprise_dataset(df_mmlvc, 'order_item_id')
+### **Dataset Splitting**
+trainset_mmlvc, testset_mmlvc = train_test_split(data=data_mmlvc, test_size=0.2, random_state=42)
+### **Hyperparam Tuning**
+#### **1. SVD (Singular Value Decomposition)**
+gs_svd_mmlvc = GridSearchCV(
+    algo_class= SVD,
+    param_grid= hyperparam_svd,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+# fit to data
+gs_svd_mmlvc.fit(data_mmlvc)
+gs_svd_mmlvc.best_score
+gs_svd_mmlvc.best_params
+#### **2. ALS (Alternating Least Square)**
+gs_als_mmlvc = GridSearchCV(
+    algo_class= BaselineOnly,
+    param_grid= hyperparam_als,
+    cv= 5,
+    measures= ['mae', 'rmse'],
+    n_jobs= -1
+)
+
+# fit
+gs_als_mmlvc.fit(data_mmlvc)
+gs_als_mmlvc.best_score
+gs_als_mmlvc.best_params
+mmlvc_mae_score = pd.DataFrame(index=['mae','rmse'])
+mmlvc_mae_score['svd_model'] = [gs_svd_mmlvc.best_score['mae'],gs_svd_mmlvc.best_score['rmse']]
+mmlvc_mae_score['als_model'] = [gs_als_mmlvc.best_score['mae'],gs_als_mmlvc.best_score['rmse']]
+mmlvc_mae_score
+Berdasarkan hasil hyperparameter tuning, ditemukan bahwa nilai MAE dan RMSE pada model SVD lebih kecil dibandingkan model ALS. Maka dari itu, dapat disimpulkan bahwa model yang lebih baik digunakan untuk pembuatan recommendation system di cluster Major Market - Low Value Customer adalah model SVD.
+
+Dapat dilihat juga bahwa RMSE nya tinggi, artinya, model yang dibuat akan lebih tidak baik membuat prediksi rekomendasi pada customer dengan kategori produk yang pembelian jumlahnya banyak.
+### **Predict**
+if gs_svd_mmlvc.best_score['mae'] < gs_als_mmlvc.best_score['mae']:
+    best_model_mmlvc = gs_svd_mmlvc.best_estimator['mae']
+else:
+    best_model_mmlvc = gs_als_mmlvc.best_estimator['mae']
+best_model_mmlvc.fit(trainset_mmlvc)
+list_customer = df_mmlvc['customer_unique_id'].drop_duplicates().to_list()
+list_product = df_mmlvc['product_category_name_english'].drop_duplicates().to_list()
+list_mmlvc = []
+
+for user in list_customer:
+    for item in list_product:
+        result = [user, item]
+        list_mmlvc.append(result)
+
+df_result_mmlvc = pd.DataFrame(
+    data= list_mmlvc,
+    columns=['customer_unique_id', 'product_category_name_english']
+    )
+df_result_mmlvc.head()
+list_est_order = []
+
+for row in df_result_mmlvc.iterrows():
+    user = row[1]['customer_unique_id']
+    item = row[1]['product_category_name_english']
+
+    # predict 1 row
+    est_order = best_model_mmlvc.predict(uid=user, iid=item)
+    list_est_order.append(est_order[3])
+df_result_mmlvc['est_order'] = list_est_order
+df_result_mmlvc
+df_actual_vs_result_mmlvc = pd.merge(
+    left= df_result_mmlvc,
+    right= df_mmlvc,
+    on = ['customer_unique_id','product_category_name_english'],
+    how = 'left'
+).rename(columns={'order_item_id':'act_order'})
+df_actual_vs_result_mmlvc.head()
+df_predict_mmlvc = df_actual_vs_result_mmlvc[df_actual_vs_result_mmlvc['act_order'].isna()].drop(columns='act_order')
+df_predict_mmlvc.head()
+df_predict_mmlvc['cat_rank'] = df_predict_mmlvc.groupby('customer_unique_id')['est_order'].rank(ascending=False, method='dense')
+df_predict_mmlvc.head()
+df_top_recom = df_predict_mmlvc[df_predict_mmlvc['cat_rank'].isin([1,2,3])].sort_values(by=['customer_unique_id','cat_rank'])
+df_top_recom.head()
+df_top_recom['cat_rank'].value_counts()
+# Custom aggregation function to join unique product categories using a set
+def join_unique_categories(categories):
+    return ', '.join(set(categories))
+
+# Group by 'customer_unique_id' and aggregate the unique product categories as a sentence
+df_mmlvc_original_cat = df_mmlvc.groupby('customer_unique_id')['product_category_name_english'].agg(join_unique_categories).reset_index()
+
+# Rename the column to 'cat_original'
+df_mmlvc_original_cat = df_mmlvc_original_cat.rename(columns={'product_category_name_english': 'cat_original'})
+
+df_mmlvc_original_cat.head()
+df_mmlvc_buyer_cat = pd.merge(left=df_top_recom, right=df_mmlvc_original_cat, on='customer_unique_id', how='left')
+df_mmlvc_buyer_cat.head()
+df_mmlvc_cat_group = df_mmlvc_buyer_cat.groupby(['cat_original','product_category_name_english'])[['est_order']].sum().reset_index()
+df_mmlvc_cat_group['cat_rank'] = df_mmlvc_cat_group.groupby(['cat_original'])['est_order'].rank(ascending=False, method='dense')
+df_mmlvc_cat_group.head()
+df_mmlvc_cat_group_top_rank = df_mmlvc_cat_group[df_mmlvc_cat_group['cat_rank'].isin([1,2,3])].sort_values(by=['cat_original','cat_rank']).reset_index(drop=True)
+df_mmlvc_cat_group_top_rank.head()
+pivot_cat_mmlvc = pd.pivot_table(
+    data=df_mmlvc_cat_group_top_rank,
+    columns='cat_original',
+    index='product_category_name_english',
+    values='est_order',
+    aggfunc=np.sum,
+)
+
+pivot_cat_mmlvc
+mmlvc_cat_recs = []
+mmlvc_cat_ori = []
+
+for col in pivot_cat_mmlvc.columns:
+    non_na_indexes = pivot_cat_mmlvc[col].index[pivot_cat_mmlvc[col].notna()]
+    joined_indexes = ', '.join(non_na_indexes)
+    mmlvc_cat_ori.append(col)
+    mmlvc_cat_recs.append(joined_indexes)
+df_mmlvc_recommendation = pd.DataFrame()
+df_mmlvc_recommendation['cat_original'] = mmlvc_cat_ori
+df_mmlvc_recommendation['cat_recommendation'] = mmlvc_cat_recs
+df_mmlvc_recommendation.head()
+    Berdasarkan hasil model recsys yang sudah dibuat, dapat diperoleh sebuah tabel rekomendasi yang dapat digunakan untuk merekomendasikan kategori produk yang dapat ditawarkan ke pelanggan berdasarkan kategori produk yang pernah dibeli oleh pelanggan tersebut. Sebagai contoh, untuk customer yang pernah membeli produk christmas_supplies, fixed_telephony, dan office_furniture.
+plt.figure(figsize=(20,15))
+sns.countplot(
+    data=df_mmlvc_recommendation, 
+    y='cat_recommendation', 
+    order=df_mmlvc_recommendation['cat_recommendation'].value_counts().sort_values(ascending=False).index)
+plt.show()
+    Berdasarkan hasil model rekomendasi, dapat disimpulkan bahwa pelanggan yang berada pada Cluster MMLVC mayoritas dapat kita rekomendasikan produk christmas_supplies, fixed_telephony, dan office_furniture.
+# **Business Impact Analysis**
+
+Pada bagian ini dilakukan pengukuran keberhasilan model dengan menghubungkannya dengan revenue yang dapat diperoleh ketika menjalankan campaign  menggunakan rekomendasi yang dihasilkan. Cara pengukurannya adalah dengan mencari rata-rata harga per kategori (Average Selling Price atau ASP) kemudian dikalikan dengan estimasi order yang diprediksi tiap cluster pada model yang dibuat (pada tiap kategori yang direkomendasikan). Estimasi order yang digunakan merupakan nilai yang sudah dikurangi dengan nilai error model (MAE) pada tiap cluster nya, sehingga tidak terjadi over-predict.
+df_asp_cat = df.groupby('product_category_name_english')[['price']].median().reset_index()
+df_asp_cat
+def calculate_predicted_revenue(df_source, mae, df_asp):
+    df_predicted = df_source.copy()
+    df_predicted = df_predicted.drop(columns='cat_rank')
+    df_predicted['est_order_aft_error'] = df_predicted['est_order'] - mae             # menghitung order setelah dikurangi nilai error nya
+    df_predicted = pd.merge(left=df_predicted, right=df_asp, on='product_category_name_english', how='left')
+    df_predicted['est_sales'] = df_predicted['est_order_aft_error'] * df_predicted['price']
+    total_predicted = df_predicted['est_sales'].sum()
+    
+    return total_predicted
+
+dataframes = [(df_omvlvc_cat_group_top_rank, gs_svd_omvlvc.best_score['mae']),
+              (df_smvlvc_cat_group_top_rank, gs_svd_smvlvc.best_score['mae']),
+              (df_mmvlvc_cat_group_top_rank, gs_svd_mmvlvc.best_score['mae']),
+              (df_omlvc_cat_group_top_rank, gs_svd_omlvc.best_score['mae']),
+              (df_smlvc_cat_group_top_rank, gs_svd_smlvc.best_score['mae']),
+              (df_mmlvc_cat_group_top_rank, gs_svd_mmlvc.best_score['mae'])]
+
+total_predicted_revenue_list = []
+
+for df_source, mae in dataframes:
+    total_predicted_revenue = calculate_predicted_revenue(df_source, mae, df_asp_cat)
+    total_predicted_revenue_list.append(total_predicted_revenue)
+pd.options.display.float_format = '{:.2f}'.format
+
+df_predicted_revenue = pd.DataFrame()
+df_predicted_revenue['cluster'] = ['OMVLVC','SMVLVC','MMVLVC','OMLVC','SMLVC','MMLVC']
+df_predicted_revenue['total_pred_revenue'] = total_predicted_revenue_list
+df_predicted_revenue
+total_campaign_revenue = df_predicted_revenue['total_pred_revenue'].sum()
+total_campaign_revenue
+    Berdasarkan model recommendation system yang telah dibuat, dapat dihitung bahwa potensi sales / revenue yang dapat diperoleh adalah sebesar 15,315,384 R$. Apabila dengan menggunakan asumsi bahwa campaign dijalankan selama 6 bulan, maka hasil ini dapat kita bandingkan dengan Last 6 Month revenue dari data yang ada.
+l6m_revenue = monthly_revenue.tail(6)
+l6m_revenue
+total_l6m_revenue = l6m_revenue['payment_value'].sum()
+total_l6m_revenue
+df_revenue_comparison = pd.DataFrame(data=[total_l6m_revenue, total_campaign_revenue], columns=['total_revenue'], index=[['last_6month','predicted_model']])
+df_revenue_comparison
+predicted_growth = (((total_campaign_revenue - total_l6m_revenue)/total_l6m_revenue)*100).round(2)
+predicted_growth
+    Berdasarkan asumsi sebelumnya bahwa apabila campaign menggunakan recommendation system dijalankan selama 6 bulan, maka hasil yang diperoleh jauh lebih tinggi dibandingkan dengan total revenue di 6 bulan kebelakang. Growth antara sales actual dengan sales predicted sebesar 145.76%
+# **Conclusion**
+
+Berdasarkan hasil analisa awal terhadap bisnis Olist, ditemukan bahwa pelanggan Olist dapat dikategorikan cenderung tidak aktif atau tidak loyal karena jarang dan hampir tidak pernah melakukan repeat order. Saat ini, sumber utama penghasilan dari platform Olist masih oleh pelanggan-pelanggan baru. Hal ini dapat disebabkan oleh beberapa hal karena sedikitnya aktivasi campaign lokal (ada daerah yang bahkan tidak ada penjual), dan kurangnya rekomendasi produk yang tepat. Berdasarkan hal ini, maka dilakukan clustering dengan tujuan untuk membuat personalized recommendation untuk pelanggan.
+
+Clustering pertama dilakukan dengan melakukan pengelompokkan pelanggan berdasarkan LRFM score nya. Hal ini dapat membedakan mana pelanggan yang aktif dan loyal dengan pelanggan yang sudah tidak aktif dan tidak loyal. Berdasarkan LRFM, diperoleh 5 Cluster pelanggan yaitu:
+- Very High Value Customer (pelanggan paling aktif)
+- High Value Customer
+- Medium Value Customer
+- Low Value Customer
+- Very Low Value Customer (pelanggan paling tidak aktif)
+
+Pembagian ini sudah didasarkan juga berdasarkan Customer Lifetime Value tiap cluster LRFM nya. Berdasarkan clustering ini, silhouette score yang diperoleh dengan menggunakan algoritma K-Means dalah 0.07313490897748755. Hal ini menunjukkan bahwa titik data tersebut cenderung memiliki tingkat keterpisahan yang rendah dengan klaster tempat ia ditempatkan, namun secara keseluruhan masih cenderung cocok dalam klasternya. Meskipun nilainya positif, nilai sil score yang mendekati nol menandakan bahwa pemisahan antara klaster tidak terlalu jelas dan ada sejumlah tumpang tindih antara klaster. Akan tetapi, nilai silhouette score menggunakan algoritma K-Means sudah mengalami peningkatan yang cukup signifikan dibanding dengan clustering manual. Maka dari itu, dapat disimpulkan bahwa metode yang lebih baik untuk mengelompokkan customer berdasarkan LRFM score nya adalah metode K-Means.
+
+Clustering kedua dilakukan dengan melakukan pengelompokkan wilayah berdasarkan jumlah pelanggan dan jumlah penjual yang ada di daerah tersebut. Hal ini dapat membedakan mana area yang menjadi market utama dan mana yang belum dioptimalkan dengan baik. Berdasarkan itu, diperoleh 3 Cluster wilayah yaitu:
+
+- Major Market
+- Secondary Market
+- Outlying Market
+
+Dalam clustering ini, nilai silhouette score yang diperoleh adalah 0.784953. Hal ini menunjukkan bahwa klasterisasi yang dilakukan sangat baik dan titik data dalam klaster tersebut memiliki tingkat keterpisahan yang tinggi. Nilai Silhouette Score yang mendekati 1 menunjukkan bahwa titik data cenderung sangat cocok dengan klaster tempat ia ditempatkan dan memiliki tingkat kesamaan yang tinggi dengan anggota klaster lainnya. Silhouette score ini juga mengindikasikan bahwa pengelompokan data tersebut relatif homogen dan kompak dalam klasternya. Hal ini menandakan bahwa data-data yang berada dalam klaster tersebut memiliki karakteristik yang mirip satu sama lain, dan perbedaan antara klaster sangat jelas.
+
+Nilai silhouette score menggunakan algoritma K-Means sudah mengalami peningkatan yang cukup signifikan dibanding dengan clustering manual. Maka dari itu, dapat disimpulkan bahwa metode yang lebih baik untuk mengelompokkan area berdasarkan jumlah pelanggan dan penjual nya adalah metode K-Means.
+
+Setelah menggabungkan kedua cluster ini, maka tiap customer dikelompokkan ke masing-masing cluster area dan LRFM. Untuk meningkatkan loyalitas dengan personalized recommendation, recommendation system difokuskan pada cluster pelanggan Low Value Customer dan Very Low Value Customer di tiap market nya. Berdasarkan model yang sudah dibuat, dapat dilihat bahwa rata-rata RMSE tiap model cenderung tinggi (diatas 2). Artinya, model ini memiliki batasan dalam memprediksi nilai-nilai yang sangat besar. Dapat diinterpretasikan bahwa model ini lebih cocok untuk memprediksi pembeli yang merupakan individual customer dibanding reseller yang mungkin membeli lewat platform dalam jumlah besar.
+
+Hasil recommendation system merupakan kategori produk yang dapat ditawarkan kepada pelanggan ketika melakukan campaign. Dengan asumsi bahwa campaign dijalankan selama 6 bulan, maka total revenue yang dapat diperoleh bisa sangat jauh lebih tinggi dibandingkan total revenue di 6 bulan kebelakang. Growth antara sales actual dengan sales predicted sebesar 145.76%.
+# **Recommendation**
+**Machine Learning Model Recommendation**
+
+1) Melakukan pembuatan model untuk cluster-cluster yang belum dibuat, sehingga dapat meningkatkan potensi peningkatan revenue juga.
+
+2) Memisahkan pembuatan model untuk pelanggan-pelanggan yang melakukan order sangat banyak, karena ada kemungkinan pelanggan tersebut adalah reseller yang membeli melalui platform. Dapat berkonsultasi dengan tim bisnis untuk pengkelompokkan pelanggan nya.
+
+3) Melakukan pembuatan model untuk recommendation system yang bisa merekomendasikan produk berdasarkan kombinasi antara item-based, content-based, dan user-based sehingga rekomendasinya tidak cenderung ke sebuah kategori produk yang populer saja.
+
+
+**Business Recommendation**
+
+1) Hasil dari recommendation system dapat digunakan untuk membuat personalized marketing activity seperti personalized Email Direct Marketing (EDM), atau localized activation di wilayah-wilayah tertentu.
+
+2) Dapat membuat produk bundling atau brand collaboration dengan mengkombinasikan hasil kategori yang direkomendasikan berdasarkan model recsys yang dibuat. Contohnya membuat paket khusus yang berisikan garden tools & telephony untuk pelanggan-pelanggan yang pernah membeli produk air conditioning.
+
+3) Melakukan survey kepada pelanggan mengenai kepuasan dan kecenderungan belanja online mereka, sehingga bisa diketahui kenapa tingkat loyalitas di platform Olist sangat rendah, dan jumlah barang yang dibeli sangat sedikit.
+# **End of Project**
+
+Created by: Osvaldo Sahat P S Sirait
